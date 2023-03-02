@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/RANKING.gd" type="Script" id=1]
+[ext_resource path="res://tudo/imagens/menu/menu_ranking.jpeg" type="Texture" id=2]
+
+[node name="RANKING" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 176, 300.5 )
+scale = Vector2( 0.494444, 0.474219 )
+texture = ExtResource( 2 )
+
+[node name="voltar" type="TextureButton" parent="."]
+margin_left = 108.0
+margin_top = 410.0
+margin_right = 244.0
+margin_bottom = 450.0
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

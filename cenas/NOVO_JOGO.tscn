@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=2]
+[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=3]
+[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
+[ext_resource path="res://script/NOVO_JOGO.gd" type="Script" id=5]
+[ext_resource path="res://tudo/imagens/menu/comeca.jpg" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 2
+
+[node name="NOVO_JOGO" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 80.8678, 385.529 )
+scale = Vector2( 0.491667, 0.475 )
+texture = ExtResource( 6 )
+offset = Vector2( 189.422, -184.272 )
+
+[node name="botao1" type="TextureButton" parent="."]
+margin_left = 88.0
+margin_top = 91.0
+margin_right = 263.0
+margin_bottom = 141.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="botao1"]
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 171.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+
+[node name="botao2" type="TextureButton" parent="."]
+margin_left = 93.0
+margin_top = 233.0
+margin_right = 268.0
+margin_bottom = 283.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="botao2"]
+margin_left = 10.0
+margin_top = 2.0
+margin_right = 176.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+
+[node name="botao3" type="TextureButton" parent="."]
+margin_left = 92.0
+margin_top = 408.0
+margin_right = 267.0
+margin_bottom = 458.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="botao3"]
+margin_left = 2.0
+margin_top = 5.0
+margin_right = 168.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+material = SubResource( 2 )
+use_parent_material = true
+margin_left = 64.0
+margin_top = 162.0
+margin_right = 291.0
+margin_bottom = 213.0
+bookmark_gutter = true
+
+[connection signal="pressed" from="botao2" to="." method="_on_botao2_pressed"]
+[connection signal="pressed" from="botao3" to="." method="_on_botao3_pressed"]
