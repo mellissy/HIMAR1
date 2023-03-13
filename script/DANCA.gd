@@ -1,9 +1,10 @@
 extends Node2D
-
+onready var timer := $VideoPlayer/Timer as Timer
 var current 
 var num1 
 var num2 
 func _ready():
+	timer.start()
 	$botao1/Label.text = "PULAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	
@@ -31,3 +32,8 @@ func write(txt):
 	var file = File.new()
 	file.open("res://citty.txt", File.WRITE)
 	file.store_string(txt)
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://cenas/CIDADE.tscn"  )
+	pass # Replace with function body.

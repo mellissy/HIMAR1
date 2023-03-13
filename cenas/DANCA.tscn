@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://tudo/Videos/teste_video_cazumba_dancando.webm" type="VideoStream" id=1]
+[ext_resource path="res://tudo/Videos/CAZUMBA_Maranhao_Imagem.webm" type="VideoStream" id=1]
 [ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=3]
 [ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
@@ -17,6 +17,10 @@ script = ExtResource( 6 )
 margin_right = 357.0
 margin_bottom = 619.0
 stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Timer" type="Timer" parent="VideoPlayer"]
+wait_time = 7.4
 
 [node name="botao1" type="TextureButton" parent="."]
 margin_left = 100.0
@@ -35,4 +39,5 @@ custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
 
+[connection signal="timeout" from="VideoPlayer/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]

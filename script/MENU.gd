@@ -15,7 +15,7 @@ func _ready():
 func _on_botao1_pressed():
 	get_tree().change_scene("res://cenas/COMECAR.tscn"  )
 	pass # Replace with function body.
-
+#c
 
 func _on_botao2_pressed():
 	get_tree().change_scene("res://cenas/OPCOES.tscn"  )

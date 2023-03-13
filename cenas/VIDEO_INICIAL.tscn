@@ -19,6 +19,9 @@ margin_bottom = 608.0
 stream = ExtResource( 1 )
 autoplay = true
 
+[node name="Timer" type="Timer" parent="VideoPlayer"]
+wait_time = 20.0
+
 [node name="botao1" type="TextureButton" parent="."]
 margin_left = 92.0
 margin_top = 531.0
@@ -36,4 +39,5 @@ custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
 
+[connection signal="timeout" from="VideoPlayer/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
