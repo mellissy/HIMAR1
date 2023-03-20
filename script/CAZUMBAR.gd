@@ -1,7 +1,7 @@
 extends Node2D
 
 
-onready var path = {
+@onready var path = {
 	"São Luís": ["Imperatriz", "Guimarães", "Carutapera"],
 	"Imperatriz": ["Viana", "Grajaú", "Buriticupu"],
 	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
@@ -22,13 +22,12 @@ var current
 var num1 
 var num2 
 func _ready():
+	$AudioStreamPlayer2D.play(5)
 	$botao1/Label.text = "VOLTAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$Label.modulate = Color(0,0,0,1)
-	
-	
-	var file = File.new()
-	file.open("res://citty.txt", File.READ)
+
+	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
 	current = leve[0]
@@ -45,28 +44,28 @@ func _ready():
 	pass
 
 func _on_botao1_pressed():
-	get_tree().change_scene("res://cenas/CIDADE.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao2_pressed():
 	current = path[current][0]
 	write(num1 + ":" + current + ";" + num2)
-	get_tree().change_scene("res://cenas/DANCA.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao3_pressed():
 	current = path[current][1]
 	write(num1 + ":" + current + ";" + num2)
-	get_tree().change_scene("res://cenas/DANCA.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao4_pressed():
 	current = path[current][2]
 	write(num1 + ":" + current + ";" + num2)
-	get_tree().change_scene("res://cenas/DANCA.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func write(txt):
-	var file = File.new()
-	file.open("res://citty.txt", File.WRITE)
+	
+	var file = FileAccess.open("res://citty.txt", FileAccess.WRITE)
 	file.store_string(txt)

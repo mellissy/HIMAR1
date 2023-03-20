@@ -1,79 +1,84 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://vvxwjaw3ylpv"]
 
-[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=2]
-[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=3]
-[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://tudo/imagens/menu/comeca.jpg" type="Texture" id=5]
-[ext_resource path="res://script/COMECAR.gd" type="Script" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="1"]
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="5"]
+[ext_resource type="Script" path="res://script/COMECAR.gd" id="6"]
+[ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_h6diy"]
 
 [node name="COMECAR" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 94, 197 )
-scale = Vector2( 0.502778, 0.475781 )
-texture = ExtResource( 5 )
-offset = Vector2( 163.094, 219.639 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(94, 197)
+scale = Vector2(0.5, 0.52)
+texture = ExtResource("5")
+offset = Vector2(163.094, 219.639)
 
 [node name="botao1" type="TextureButton" parent="."]
-margin_left = 95.0
-margin_top = 155.0
-margin_right = 270.0
-margin_bottom = 205.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 95.0
+offset_top = 155.0
+offset_right = 270.0
+offset_bottom = 205.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao1"]
-margin_left = 3.0
-margin_top = 1.0
-margin_right = 169.0
-margin_bottom = 42.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 206.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
-margin_left = 94.0
-margin_top = 237.0
-margin_right = 269.0
-margin_bottom = 287.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 94.0
+offset_top = 237.0
+offset_right = 269.0
+offset_bottom = 287.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao2"]
-margin_left = 5.0
-margin_right = 171.0
-margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_left = 8.33334
+offset_top = 18.3333
+offset_right = 215.333
+offset_bottom = 60.3333
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 23
 
 [node name="botao3" type="TextureButton" parent="."]
-margin_left = 96.0
-margin_top = 320.0
-margin_right = 271.0
-margin_bottom = 370.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 96.0
+offset_top = 320.0
+offset_right = 271.0
+offset_bottom = 370.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao3"]
-margin_left = 2.0
-margin_top = 1.0
-margin_right = 168.0
-margin_bottom = 42.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 17.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_h6diy")
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
 [connection signal="pressed" from="botao3" to="." method="_on_botao3_pressed"]

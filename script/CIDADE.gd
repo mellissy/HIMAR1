@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var cidades ={
+@onready var cidades ={
 	"São Luís": [ "res://tudo/imagens/mapa/telaSaoLuis2.jpg" ],
 	"Grajaú": ["res://tudo/imagens/mapa/mapa_grajau.jpg"  ],
 	"Imperatriz": [ "res://tudo/imagens/mapa/mapa_imperatriz.jpeg"],
@@ -17,7 +17,7 @@ onready var cidades ={
 	"Viana": [  "res://tudo/imagens/mapa/Viana.jpg" ],
 	}
 	
-onready var penas ={
+@onready var penas ={
 	"pena":[
 	"res://tudo/imagens/sino_azul/sino1azull.png",
 	"res://tudo/imagens/sino_azul/sino2azull.png",
@@ -32,7 +32,7 @@ onready var penas ={
 	]
 } 
 
-onready var position_b = {
+@onready var position_b = {
 	"São Luís": [Vector2(110,160),Vector2(125,250),Vector2(230,310)  ],
 	"Grajaú": [ Vector2(100,135),Vector2(200,275),Vector2(20,360) ],
 	"Imperatriz": [Vector2(190,110),Vector2(50,200),Vector2(200,275)  ],
@@ -49,7 +49,7 @@ onready var position_b = {
 	"Viana": [ Vector2(30,250),Vector2(230,290),Vector2(160,370) ],
 	}
 
-onready var size_b ={
+@onready var size_b ={
 	"São Luís": [ Vector2(160,60),Vector2(60,70),Vector2(110,95) ],
 	"Grajaú": [ Vector2(80,140),Vector2(140,100),Vector2(125,110) ],
 	"Imperatriz": [ Vector2(80,110),Vector2(115,100),Vector2(125,110) ],
@@ -71,40 +71,42 @@ var num1 = " "
 var num2 
 
 func _ready():
-	
+	$AudioStreamPlayer2D.play()
 	$botao1/Label.text = "CAZUMBAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$botao2/Label.text = "VOLTAR"
 	$botao2/Label.modulate = Color(0,0,0,1)
 	$estamos_em.modulate = Color(0,0,0,1)
-	var file = File.new()
-	file.open("res://citty.txt", File.READ)
+	
+	
+	# = File.new()
+	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
 	current = leve[0]
 	num2 = leve[1]
 	var cont = int(leve[1])
 	$penas.texture = load(penas["pena"][cont])
-	$Sprite.texture = load(cidades[current][0])
+	$Sprite2D.texture = load(cidades[current][0])
 	$estamos_em.text = " Você está em " + current +"!"
 	
-	$dica1.rect_position = position_b[current][0]
-	$dica2.rect_position = position_b[current][1]
-	$dica3.rect_position = position_b[current][2]
+	$dica1.position = position_b[current][0]
+	$dica2.position = position_b[current][1]
+	$dica3.position = position_b[current][2]
 	
-	$dica1.rect_size = size_b[current][0]
-	$dica2.rect_size = size_b[current][1]
-	$dica3.rect_size = size_b[current][2]
+	$dica1.size = size_b[current][0]
+	$dica2.size = size_b[current][1]
+	$dica3.size = size_b[current][2]
 	print(info) # info[0],current;leve[1]
 	pass
 	
 func _on_botao2_pressed():
-	get_tree().change_scene("res://cenas/MENU.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
 	
 	pass # Replace with function body.
 
 func _on_botao1_pressed():
-	get_tree().change_scene("res://cenas/CAZUMBAR.tscn" )
+	get_tree().change_scene_to_file("res://cenas/CAZUMBAR.tscn" )
 	
 	pass # Replace with function body.
 
@@ -112,30 +114,30 @@ func _on_dica1_pressed():
 	num1 = "0"
 	write(num1 + ":" + current + ";" + num2)
 	if current == "Alcântara" :
-		get_tree().change_scene("res://cenas/RELIQUIAS.tscn" )
+		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
-		get_tree().change_scene("res://cenas/DICA.tscn" )
+		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
 
 func _on_dica2_pressed():
 	num1 = "1"
 	write(num1 + ":" + current + ";" + num2)
 	if current == "Alcântara" or (current == "Codó" and num1 == "1"):
-		get_tree().change_scene("res://cenas/RELIQUIAS.tscn" )
+		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
-		get_tree().change_scene("res://cenas/DICA.tscn" )
+		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
 
 func _on_dica3_pressed():
 	num1 = "2"
 	write(num1 + ":" + current + ";" + num2)
 	if current == "Alcântara" :
-		get_tree().change_scene("res://cenas/RELIQUIAS.tscn" )
+		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
-		get_tree().change_scene("res://cenas/DICA.tscn" )
+		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
 
 func write(txt):
-	var file = File.new()
-	file.open("res://citty.txt", File.WRITE)
+	#var file = File.new()
+	var file = FileAccess.open("res://citty.txt", FileAccess.WRITE)
 	file.store_string(txt)

@@ -1,108 +1,114 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://in1d12k67snp"]
 
-[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=2]
-[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=3]
-[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://tudo/imagens/menu/comeca.jpg" type="Texture" id=5]
-[ext_resource path="res://script/CAZUMBAR.gd" type="Script" id=6]
-[ext_resource path="res://tudo/fonts/vademecum.ttf" type="DynamicFontData" id=7]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 20
-font_data = ExtResource( 7 )
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="5"]
+[ext_resource type="Script" path="res://script/CAZUMBAR.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_bj3ri"]
+[ext_resource type="FontFile" uid="uid://bnfy8yxuft3q2" path="res://tudo/fonts/vademecum.ttf" id="7_18jo8"]
+[ext_resource type="AudioStream" uid="uid://rnhfvrkvbj2k" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="8_o06h3"]
 
 [node name="CAZUMBAR" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 83, 367 )
-scale = Vector2( 0.495833, 0.471875 )
-texture = ExtResource( 5 )
-offset = Vector2( 178.487, -137.748 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(81, 389)
+scale = Vector2(0.5, 0.52)
+texture = ExtResource("5")
+offset = Vector2(178.487, -137.748)
 
 [node name="botao1" type="TextureButton" parent="."]
-margin_left = 88.0
-margin_top = 94.0
-margin_right = 263.0
-margin_bottom = 144.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 109.0
+offset_top = 106.0
+offset_right = 332.0
+offset_bottom = 184.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao1"]
-margin_right = 166.0
-margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 13.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_bj3ri")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
-margin_left = 85.0
-margin_top = 257.0
-margin_right = 260.0
-margin_bottom = 307.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 109.0
+offset_top = 267.0
+offset_right = 332.0
+offset_bottom = 345.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao2"]
-margin_top = -1.0
-margin_right = 166.0
-margin_bottom = 40.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 10.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_bj3ri")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
-margin_left = 85.0
-margin_top = 332.0
-margin_right = 260.0
-margin_bottom = 382.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 110.0
+offset_top = 333.0
+offset_right = 333.0
+offset_bottom = 411.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao3"]
-margin_right = 166.0
-margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_bj3ri")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao4" type="TextureButton" parent="."]
-margin_left = 84.0
-margin_top = 411.0
-margin_right = 259.0
-margin_bottom = 461.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 110.0
+offset_top = 399.0
+offset_right = 333.0
+offset_bottom = 477.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao4"]
-margin_right = 166.0
-margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 13.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_bj3ri")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
-margin_left = 62.0
-margin_top = 166.0
-margin_right = 290.0
-margin_bottom = 225.0
-custom_fonts/font = SubResource( 2 )
-align = 1
-valign = 1
-autowrap = true
+offset_left = 88.0
+offset_top = 168.0
+offset_right = 267.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("7_18jo8")
+theme_override_font_sizes/font_size = 20
 clip_text = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_o06h3")
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
 [connection signal="pressed" from="botao2" to="." method="_on_botao2_pressed"]

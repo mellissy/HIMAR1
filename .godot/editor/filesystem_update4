@@ -1,0 +1,9 @@
+res://default_env.tres
+res://cenas/MENU.tscn
+res://cenas/NOVO_JOGO.tscn
+res://cenas/CAZUMBAR.tscn
+res://cenas/CIDADE.tscn
+res://cenas/DANCA.tscn
+res://cenas/INSTRUCOES.tscn
+res://cenas/VIDEO_INICIAL.tscn
+res://cenas/DICA.tscn

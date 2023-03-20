@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var texto ={
+@onready var texto ={
 	"São Luís": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
@@ -76,7 +76,7 @@ onready var texto ={
 	],
 }
 
-onready var tela ={
+@onready var tela ={
 	"São Luís": [ 
 	"res://tudo/imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
 	"res://tudo/imagens/personagens/saoLuis/dica2_saoLuis.jpeg",
@@ -97,27 +97,28 @@ onready var tela ={
 		
 	],
 	"Carutapera": [
-	  "res://tudo/imagens/personagens/pindare/Zezinho.jpg",
-	"res://tudo/imagens/personagens/codo/Pedrinho.jpg",
-	"res://tudo/imagens/personagens/imperatriz/Leia.jpg"
-	
+		
+		"res://tudo/imagens/personagens/pindare/Zezinho.jpg",
+		"res://tudo/imagens/personagens/codo/Pedrinho.jpg",
+		"res://tudo/imagens/personagens/imperatriz/Leia.jpg"
+		
 	],
 	"Pindaré": [
-		 "res://tudo/imagens/personagens/pindare/Zezinho.jpg",
+		"res://tudo/imagens/personagens/pindare/Zezinho.jpg",
 		"res://tudo/imagens/personagens/pindare/Pescadori2.jpg",
-		 "res://tudo/imagens/personagens/pindare/Amanda.jpg", 
+		"res://tudo/imagens/personagens/pindare/Amanda.jpg", 
 	
 	],
 	"Alcântara": [ 
 	"res://tudo/imagens/personagens/alcantara/Joao.jpg",
-	 "res://tudo/imagens/personagens/alcantara/Luizinho.jpg",
-	 "res://tudo/imagens/personagens/alcantara/Ruan.jpg"
+	"res://tudo/imagens/personagens/alcantara/Luizinho.jpg",
+	"res://tudo/imagens/personagens/alcantara/Ruan.jpg"
 
 	],
 	"Guimarães": [
-	 "res://tudo/imagens/personagens/alcantara/Joao.jpg",
-	 "res://tudo/imagens/personagens/alcantara/Luizinho.jpg",
-	 "res://tudo/imagens/personagens/alcantara/Ruan.jpg"
+		"res://tudo/imagens/personagens/alcantara/Joao.jpg",
+		"res://tudo/imagens/personagens/alcantara/Luizinho.jpg",
+		"res://tudo/imagens/personagens/alcantara/Ruan.jpg"
 	
 	],
 	"Buriticupu": [
@@ -157,9 +158,9 @@ onready var tela ={
 	
 	],
 	"Viana": [
-	 "res://tudo/imagens/personagens/alcantara/Ruan.jpg",
-	"res://tudo/imagens/personagens/codo/Pedrinho.jpg",
-	"res://tudo/imagens/personagens/codo/Gi.jpg",
+		"res://tudo/imagens/personagens/alcantara/Ruan.jpg",
+		"res://tudo/imagens/personagens/codo/Pedrinho.jpg",
+		"res://tudo/imagens/personagens/codo/Gi.jpg",
 	
 	],
 	
@@ -175,8 +176,8 @@ func _ready():
 	$botao2/Label.text = "CAZMBAR"
 	$botao2/Label.modulate = Color(0,0,0,1)
 	
-	var file = File.new()
-	file.open("res://citty.txt", File.READ)
+	#var file = File.new()
+	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
 	current = leve[0]
@@ -187,7 +188,7 @@ func _ready():
 	$Label.text = (texto[current][num])
 	$Label.modulate = Color(0,0,0,1)
 	var num = int(num1)
-	$Sprite.texture = load(tela[current][num])
+	$Sprite2D.texture = load(tela[current][num])
 	
 	pass
 var soma = 0 
@@ -198,16 +199,16 @@ func _process(delta):
 	
 	
 func _on_botao1_pressed():
-	get_tree().change_scene("res://cenas/CIDADE.tscn" )
+	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.
 
 
 func _on_botao2_pressed():
-	get_tree().change_scene("res://cenas/CAZUMBAR.tscn" )
+	get_tree().change_scene_to_file("res://cenas/CAZUMBAR.tscn" )
 	pass # Replace with function body.
 
 
 func write(txt):
-	var file = File.new()
-	file.open("res://citty.txt", File.WRITE)
+	#var file = File.new()
+	var file =FileAccess.open("res://citty.txt", FileAccess.WRITE)
 	file.store_string(txt)

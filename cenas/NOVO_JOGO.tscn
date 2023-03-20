@@ -1,92 +1,95 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://cch7d0mr8tk8k"]
 
-[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=2]
-[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=3]
-[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://script/NOVO_JOGO.gd" type="Script" id=5]
-[ext_resource path="res://tudo/imagens/menu/comeca.jpg" type="Texture" id=6]
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Script" path="res://script/NOVO_JOGO.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_80sd6"]
+[ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_qgb01"]
 
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
-
-[sub_resource type="CanvasItemMaterial" id=2]
+[sub_resource type="CanvasItemMaterial" id="2"]
 blend_mode = 2
 
 [node name="NOVO_JOGO" type="Node2D"]
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 80.8678, 385.529 )
-scale = Vector2( 0.491667, 0.475 )
-texture = ExtResource( 6 )
-offset = Vector2( 189.422, -184.272 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(85, 416)
+scale = Vector2(0.5, 0.52)
+texture = ExtResource("6")
+offset = Vector2(189.422, -184.272)
 
 [node name="botao1" type="TextureButton" parent="."]
-margin_left = 88.0
-margin_top = 91.0
-margin_right = 263.0
-margin_bottom = 141.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 116.0
+offset_top = 103.0
+offset_right = 339.0
+offset_bottom = 181.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao1"]
-margin_left = 5.0
-margin_top = 4.0
-margin_right = 171.0
-margin_bottom = 45.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 17.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_80sd6")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
-margin_left = 93.0
-margin_top = 233.0
-margin_right = 268.0
-margin_bottom = 283.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 115.0
+offset_top = 227.0
+offset_right = 338.0
+offset_bottom = 305.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao2"]
-margin_left = 10.0
-margin_top = 2.0
-margin_right = 176.0
-margin_bottom = 43.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_80sd6")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
-margin_left = 92.0
-margin_top = 408.0
-margin_right = 267.0
-margin_bottom = 458.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 4 )
-expand = true
+offset_left = 116.0
+offset_top = 442.0
+offset_right = 339.0
+offset_bottom = 520.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2")
+texture_pressed = ExtResource("3")
+texture_hover = ExtResource("4")
 
 [node name="Label" type="Label" parent="botao3"]
-margin_left = 2.0
-margin_top = 5.0
-margin_right = 168.0
-margin_bottom = 46.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_80sd6")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
-material = SubResource( 2 )
+material = SubResource("2")
 use_parent_material = true
-margin_left = 64.0
-margin_top = 162.0
-margin_right = 291.0
-margin_bottom = 213.0
-bookmark_gutter = true
+offset_left = 74.0
+offset_top = 167.0
+offset_right = 291.0
+offset_bottom = 206.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_qgb01")
 
 [connection signal="pressed" from="botao2" to="." method="_on_botao2_pressed"]
 [connection signal="pressed" from="botao3" to="." method="_on_botao3_pressed"]

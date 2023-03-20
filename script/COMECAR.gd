@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready():
+	$AudioStreamPlayer2D.play(2)
 	$botao1/Label.text ="NOVO JOGO"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$botao2/Label.text ="RECARREGAR JOGO"
@@ -12,10 +13,10 @@ func _ready():
 
 
 func _on_botao1_pressed():
-	get_tree().change_scene("res://cenas/NOVO_JOGO.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/NOVO_JOGO.tscn"  )
 	pass # Replace with function body.
 
 
 func _on_botao3_pressed():
-	get_tree().change_scene("res://cenas/MENU.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
 	pass # Replace with function body.

@@ -1,77 +1,71 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://bs60ehaxylsw"]
 
-[ext_resource path="res://tudo/imagens/personagens/alcantara/Joao.jpg" type="Texture" id=1]
-[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=2]
-[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=3]
-[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=4]
-[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=5]
-[ext_resource path="res://script/DICA.gd" type="Script" id=6]
-[ext_resource path="res://tudo/fonts/COURGETTE-REGULAR.TTF" type="DynamicFontData" id=7]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 12
-outline_color = Color( 0.835294, 0.764706, 0.764706, 1 )
-font_data = ExtResource( 7 )
+[ext_resource type="Texture2D" uid="uid://bbi4l20vng6gp" path="res://tudo/imagens/personagens/alcantara/Joao.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="5"]
+[ext_resource type="Script" path="res://script/DICA.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
 
 [node name="DICA" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 179, 57 )
-scale = Vector2( 0.494444, 0.475781 )
-texture = ExtResource( 1 )
-offset = Vector2( 0, 520.197 )
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(172, 52)
+scale = Vector2(0.5, 0.52)
+texture = ExtResource("1")
+offset = Vector2(0, 520.197)
 
 [node name="botao1" type="TextureButton" parent="."]
-margin_left = 190.0
-margin_top = 12.0
-margin_right = 337.0
-margin_bottom = 62.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
-expand = true
+offset_left = 195.0
+offset_top = 10.0
+offset_right = 418.0
+offset_bottom = 88.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("5")
 
 [node name="Label" type="Label" parent="botao1"]
-margin_left = 3.0
-margin_top = -4.0
-margin_right = 152.0
-margin_bottom = 37.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("6_kepbp")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
-margin_left = 21.0
-margin_top = 13.0
-margin_right = 169.0
-margin_bottom = 63.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
-expand = true
+offset_left = 37.0
+offset_top = 11.0
+offset_right = 260.0
+offset_bottom = 89.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("4")
+texture_hover = ExtResource("5")
 
 [node name="Label" type="Label" parent="botao2"]
-margin_left = -27.0
-margin_top = 3.0
-margin_right = 139.0
-margin_bottom = 44.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 13.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("6_kepbp")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
-margin_left = 79.0
-margin_top = 430.0
-margin_right = 276.0
-margin_bottom = 580.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_constants/line_spacing = 1
-custom_fonts/font = SubResource( 2 )
-autowrap = true
+offset_left = 63.0
+offset_top = 475.0
+offset_right = 284.0
+offset_bottom = 634.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 clip_text = true
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]

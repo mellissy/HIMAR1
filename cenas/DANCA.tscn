@@ -1,38 +1,46 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://b37fcm7k338hf"]
 
-[ext_resource path="res://tudo/Videos/teste_video_cazumba_dancando.webm" type="VideoStream" id=1]
-[ext_resource path="res://tudo/fonts/BRITANIC.TTF" type="DynamicFontData" id=2]
-[ext_resource path="res://tudo/Botoes/botao.png" type="Texture" id=3]
-[ext_resource path="res://tudo/Botoes/BotaoClique.png" type="Texture" id=4]
-[ext_resource path="res://tudo/Botoes/botaoAoClicar.png" type="Texture" id=5]
-[ext_resource path="res://script/DANCA.gd" type="Script" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
+[ext_resource type="VideoStream" path="res://tudo/Videos/CAZUMBA_danca_convertido.ogv" id="2_3juos"]
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="5"]
+[ext_resource type="Script" path="res://script/DANCA.gd" id="6"]
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_jqpse"]
+[ext_resource type="AudioStream" uid="uid://bml3j2jtwjeay" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_dj3n2"]
 
 [node name="DANCA" type="Node2D"]
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_right = 357.0
-margin_bottom = 619.0
-stream = ExtResource( 1 )
-
-[node name="botao1" type="TextureButton" parent="."]
-margin_left = 100.0
-margin_top = 529.0
-margin_right = 275.0
-margin_bottom = 579.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 4 )
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 362.0
+offset_bottom = 644.0
+stream = ExtResource("2_3juos")
+autoplay = true
 expand = true
 
-[node name="Label" type="Label" parent="botao1"]
-margin_right = 166.0
-margin_bottom = 41.0
-custom_fonts/font = SubResource( 1 )
-align = 1
-valign = 1
+[node name="botao1" type="TextureButton" parent="."]
+offset_left = 102.0
+offset_top = 557.0
+offset_right = 325.0
+offset_bottom = 635.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3")
+texture_pressed = ExtResource("5")
+texture_hover = ExtResource("4")
 
+[node name="Label" type="Label" parent="botao1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("6_jqpse")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dj3n2")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
