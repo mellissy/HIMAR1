@@ -1,6 +1,11 @@
 extends Node2D
 
 func _ready():
+	Global.cidade = "São Luís"
+	Global.botao = 0
+	Global.pena = 9
+	
+	
 	#$AudioStreamPlayer2D.play()
 	$botao1/Label.text = "PULAR"
 	$botao1/Label.modulate = Color(0,0,0,1)

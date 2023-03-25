@@ -60,9 +60,10 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 offset_left = 63.0
-offset_top = 475.0
+offset_top = 454.0
 offset_right = 284.0
-offset_bottom = 634.0
+offset_bottom = 613.0
+theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

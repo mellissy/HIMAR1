@@ -1,15 +1,12 @@
 extends Node2D
 
-var current
+var current = " "
 var num2
 func _ready():
 	
-	#var file = File.new()
-	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
-	var info = file.get_as_text().split(":")
-	var leve = info[1].split(";")
-	current = leve[0]
-	num2 = leve[1]
+	
+	current = Global.cidade
+	num2 = Global.pena
 	
 	if current == "Codó":
 		$Label.text = "PARABÉNS,\nVOCÊ ENCONTROU A PRIMEIRA RELÍQUIA!"
@@ -17,10 +14,10 @@ func _ready():
 		$Sprite2D.texture = load("res://tudo/imagens/reliquia/reliquia_1.jpeg" )
 	elif current == "Alcântara":
 		$Label.text = "PARABÉNS,\nVOCÊ ENCONTROU TODAS AS RELÍQUIAS!"
-		$botao1/Label.text =" CONTINUAR"
+		$botao1/Label.text =" SAIR"
 		$Sprite2D.texture = load( "res://tudo/imagens/reliquia/reliquia1.jpeg")
 	else:
-		if num2 == "-1":
+		if num2 == -1:
 			$Sprite2D.texture = load("res://tudo/imagens/sino_azul/sino0azul.jpg" )
 			$Sprite2D.scale = Vector2(0.5,0.5)
 			$Label.text = "GAME OVER"

@@ -166,7 +166,7 @@ extends Node2D
 	
 }
 
-var current 
+var current = " "
 var num1 
 var num2 
 var num =0
@@ -176,19 +176,13 @@ func _ready():
 	$botao2/Label.text = "CAZMBAR"
 	$botao2/Label.modulate = Color(0,0,0,1)
 	
-	#var file = File.new()
-	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
-	var info = file.get_as_text().split(":")
-	var leve = info[1].split(";")
-	current = leve[0]
+	current = Global.cidade
+	num1 =Global.botao
+	num2 = Global.pena
 	
-	num1 = info[0]
-	num2 = leve[1]
-	num = int(info[0])
-	$Label.text = (texto[current][num])
+	$Label.text = (texto[current][num1])
 	$Label.modulate = Color(0,0,0,1)
-	var num = int(num1)
-	$Sprite2D.texture = load(tela[current][num])
+	$Sprite2D.texture = load(tela[current][num1])
 	
 	pass
 var soma = 0 
@@ -207,8 +201,3 @@ func _on_botao2_pressed():
 	get_tree().change_scene_to_file("res://cenas/CAZUMBAR.tscn" )
 	pass # Replace with function body.
 
-
-func write(txt):
-	#var file = File.new()
-	var file =FileAccess.open("res://citty.txt", FileAccess.WRITE)
-	file.store_string(txt)

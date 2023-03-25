@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready():
-	$AudioStreamPlayer2D.play(2)
+	#$AudioStreamPlayer2D.play(2)
 	$musica/Label.text ="MUSICA"
 	$musica/Label.modulate = Color(0,0,0,1)
 	$sons/Label.text =  "EFEITOS SONOROS"

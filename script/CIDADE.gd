@@ -66,11 +66,15 @@ extends Node2D
 	"Viana": [ Vector2(80,60),Vector2(70,70),Vector2(65,60) ],
 	}
 
-var current = " "
-var num1 = " "
+var current = ""
+var num1 
 var num2 
 
 func _ready():
+	current =Global.cidade
+	num1 = Global.botao
+	num2 =Global.pena
+	
 	$AudioStreamPlayer2D.play()
 	$botao1/Label.text = "CAZUMBAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
@@ -79,14 +83,9 @@ func _ready():
 	$estamos_em.modulate = Color(0,0,0,1)
 	
 	
-	# = File.new()
-	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
-	var info = file.get_as_text().split(":")
-	var leve = info[1].split(";")
-	current = leve[0]
-	num2 = leve[1]
-	var cont = int(leve[1])
-	$penas.texture = load(penas["pena"][cont])
+	
+	
+	$penas.texture = load(penas["pena"][num2])
 	$Sprite2D.texture = load(cidades[current][0])
 	$estamos_em.text = " Você está em " + current +"!"
 	
@@ -97,7 +96,7 @@ func _ready():
 	$dica1.size = size_b[current][0]
 	$dica2.size = size_b[current][1]
 	$dica3.size = size_b[current][2]
-	print(info) # info[0],current;leve[1]
+
 	pass
 	
 func _on_botao2_pressed():
@@ -111,8 +110,8 @@ func _on_botao1_pressed():
 	pass # Replace with function body.
 
 func _on_dica1_pressed():
-	num1 = "0"
-	write(num1 + ":" + current + ";" + num2)
+	Global.botao = 0
+	#write(num1 + ":" + current + ";" + num2)
 	if current == "Alcântara" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
@@ -120,24 +119,19 @@ func _on_dica1_pressed():
 	pass # Replace with function body.
 
 func _on_dica2_pressed():
-	num1 = "1"
-	write(num1 + ":" + current + ";" + num2)
-	if current == "Alcântara" or (current == "Codó" and num1 == "1"):
+	Global.botao = 1
+	#write(num1 + ":" + current + ";" + num2)
+	if Global.cidade == "Alcântara" or (Global.cidade == "Codó" and Global.botao == 1):
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
 
 func _on_dica3_pressed():
-	num1 = "2"
-	write(num1 + ":" + current + ";" + num2)
+	Global.botao = 2
+	#write(num1 + ":" + current + ";" + num2)
 	if current == "Alcântara" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
-
-func write(txt):
-	#var file = File.new()
-	var file = FileAccess.open("res://citty.txt", FileAccess.WRITE)
-	file.store_string(txt)

@@ -27,12 +27,10 @@ func _ready():
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$Label.modulate = Color(0,0,0,1)
 
-	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
-	var info = file.get_as_text().split(":")
-	var leve = info[1].split(";")
-	current = leve[0]
-	num1 =info[0]
-	num2 =leve[1]
+	
+	current = Global.cidade
+	num1 =Global.botao
+	num2 =Global.pena
 	
 	$Label.text = "Estamos em "+ current + "\n Vamos para onde?"
 	$botao2/Label.text = (path[current][0])
@@ -48,24 +46,19 @@ func _on_botao1_pressed():
 	pass # Replace with function body.
 
 func _on_botao2_pressed():
-	current = path[current][0]
-	write(num1 + ":" + current + ";" + num2)
+	Global.cidade = path[current][0]
+	#write(num1 + ":" + current + ";" + num2)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao3_pressed():
-	current = path[current][1]
-	write(num1 + ":" + current + ";" + num2)
+	Global.cidade = path[current][1]
+	#write(num1 + ":" + current + ";" + num2)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao4_pressed():
-	current = path[current][2]
-	write(num1 + ":" + current + ";" + num2)
+	Global.cidade = path[current][2]
+	#write(num1 + ":" + current + ";" + num2)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
-
-func write(txt):
-	
-	var file = FileAccess.open("res://citty.txt", FileAccess.WRITE)
-	file.store_string(txt)
