@@ -78,9 +78,9 @@ extends Node2D
 
 @onready var tela ={
 	"São Luís": [ 
-	"res://tudo/imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
-	"res://tudo/imagens/personagens/saoLuis/dica2_saoLuis.jpeg",
-	"res://tudo/imagens/personagens/saoLuis/dica3_saoluis.jpeg"
+		"res://tudo/imagens/personagens/saoLuis/dica1_saoLuis.jpeg",
+		"res://tudo/imagens/personagens/saoLuis/dica2_saoLuis.jpeg",
+		"res://tudo/imagens/personagens/pindare/Zezinho.jpg"
 	
 	],
 	"Imperatriz": [

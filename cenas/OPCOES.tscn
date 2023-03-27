@@ -100,3 +100,4 @@ vertical_alignment = 1
 stream = ExtResource("7_r0stv")
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
+[connection signal="pressed" from="caixa_musica" to="." method="_on_caixa_musica_pressed"]

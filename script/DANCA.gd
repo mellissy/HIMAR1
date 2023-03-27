@@ -7,7 +7,10 @@ func _ready():
 	print(Global.cidade)
 	print(Global.botao)
 	print(Global.pena)
-	$AudioStreamPlayer2D.play()
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
 	$botao1/Label.text = "PULAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	

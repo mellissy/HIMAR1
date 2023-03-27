@@ -74,8 +74,10 @@ func _ready():
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
-	
-	$AudioStreamPlayer2D.play()
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
 	$botao1/Label.text = "CAZUMBAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$botao2/Label.text = "VOLTAR"

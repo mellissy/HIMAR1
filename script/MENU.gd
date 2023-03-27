@@ -2,7 +2,12 @@ extends Node2D
 
 
 func _ready():
-	$AudioStreamPlayer2D.play(1)
+	print(Global.som)
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
+		
 	$botao1/Label.text= "COMEÇAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$botao2/Label.text= "OPÇÕES"

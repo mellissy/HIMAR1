@@ -2,7 +2,10 @@ extends Node2D
 
 
 func _ready():
-	$AudioStreamPlayer2D.play(2)
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
 	$Sprite2D.scale = Vector2(0.5,0.53)
 	$Sprite2D.position = Vector2(80,420)
 	
