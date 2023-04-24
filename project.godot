@@ -22,6 +22,7 @@ Global="*res://script/GLOBAL.gd"
 [display]
 
 window/size/viewport_width=350
+window/size/initial_position_type=0
 window/handheld/orientation=1
 
 [gui]

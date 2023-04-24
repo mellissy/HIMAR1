@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 func _ready():
@@ -25,7 +25,7 @@ func _on_botao1_pressed():
 #c
 
 func _on_botao2_pressed():
-	get_tree().change_scene_to_file("res://cenas/OPCOES.tscn"  )
+	get_tree().change_scene_to_file( "res://cenas/OPCOES.tscn" )
 	
 	pass # Replace with function body.
 

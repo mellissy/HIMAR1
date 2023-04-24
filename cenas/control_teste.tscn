@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://be4mdl1j5q54i"]
+
+[ext_resource type="Texture2D" uid="uid://vk4bpdq2otnv" path="res://tudo/imagens/personagens/alcantara/Zezinho.jpg" id="1_imyyc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(173.5, 322.5)
+scale = Vector2(0.493056, 0.507031)
+texture = ExtResource("1_imyyc")

@@ -8,8 +8,11 @@
 [ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_bxvux"]
 [ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_3kidp"]
 
-[node name="INSTRUCOES" type="Node2D"]
-position = Vector2(-7, 0)
+[node name="INSTRUCOES" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -7.0
+offset_right = -7.0
 script = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

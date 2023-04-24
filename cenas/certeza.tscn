@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdgm375wckdhg"]
+
+[ext_resource type="Script" path="res://script/Control.gd" id="1_ck1sr"]
+[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="2_ukgb1"]
+[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="3_1hhgv"]
+[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="4_uurc0"]
+[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="5_4nvh3"]
+[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="6_adav3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ck1sr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(176.787, 323.146)
+rotation = 0.00951558
+scale = Vector2(-0.493331, 0.518849)
+texture = ExtResource("2_ukgb1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 181.0
+offset_right = 288.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("3_1hhgv")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sim" type="TextureButton" parent="."]
+offset_left = 37.0
+offset_top = 411.0
+offset_right = 260.0
+offset_bottom = 489.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_uurc0")
+texture_pressed = ExtResource("5_4nvh3")
+texture_hover = ExtResource("6_adav3")
+
+[node name="Label" type="Label" parent="sim"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_1hhgv")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nao" type="TextureButton" parent="."]
+offset_left = 173.0
+offset_top = 409.0
+offset_right = 396.0
+offset_bottom = 487.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("4_uurc0")
+texture_pressed = ExtResource("5_4nvh3")
+texture_hover = ExtResource("6_adav3")
+
+[node name="Label" type="Label" parent="nao"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_1hhgv")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="sim" to="." method="_on_sim_pressed"]
+[connection signal="pressed" from="nao" to="." method="_on_nao_pressed"]

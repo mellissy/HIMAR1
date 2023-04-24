@@ -11,7 +11,9 @@
 [sub_resource type="CanvasItemMaterial" id="2"]
 blend_mode = 2
 
-[node name="NOVO_JOGO" type="Node2D"]
+[node name="NOVO_JOGO" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

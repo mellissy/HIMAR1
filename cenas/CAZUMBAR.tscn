@@ -9,7 +9,9 @@
 [ext_resource type="FontFile" uid="uid://bnfy8yxuft3q2" path="res://tudo/fonts/vademecum.ttf" id="7_18jo8"]
 [ext_resource type="AudioStream" uid="uid://rnhfvrkvbj2k" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="8_o06h3"]
 
-[node name="CAZUMBAR" type="Node2D"]
+[node name="CAZUMBAR" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

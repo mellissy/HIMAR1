@@ -8,7 +8,9 @@
 [ext_resource type="Script" path="res://script/COMECAR.gd" id="6"]
 [ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_h6diy"]
 
-[node name="COMECAR" type="Node2D"]
+[node name="COMECAR" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

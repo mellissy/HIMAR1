@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var texto ={
 	"São Luís": [ 
@@ -173,7 +173,7 @@ var num =0
 func _ready():
 	$botao1/Label.text = "VOLTAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
-	$botao2/Label.text = "CAZMBAR"
+	$botao2/Label.text = "CAZUMBAR"
 	$botao2/Label.modulate = Color(0,0,0,1)
 	
 	current = Global.cidade

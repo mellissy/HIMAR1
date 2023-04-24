@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 @onready var path = {
@@ -50,18 +50,16 @@ func _on_botao1_pressed():
 
 func _on_botao2_pressed():
 	Global.cidade = path[current][0]
-	#write(num1 + ":" + current + ";" + num2)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao3_pressed():
 	Global.cidade = path[current][1]
-	#write(num1 + ":" + current + ";" + num2)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao4_pressed():
 	Global.cidade = path[current][2]
-	#write(num1 + ":" + current + ";" + num2)
+	
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.

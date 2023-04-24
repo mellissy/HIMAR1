@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="6"]
 [ext_resource type="FontFile" uid="uid://bnfy8yxuft3q2" path="res://tudo/fonts/vademecum.ttf" id="7_wwxsk"]
 
-[node name="RELIQUIAS" type="Node2D"]
+[node name="RELIQUIAS" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

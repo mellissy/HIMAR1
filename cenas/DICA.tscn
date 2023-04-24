@@ -7,7 +7,9 @@
 [ext_resource type="Script" path="res://script/DICA.gd" id="6"]
 [ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
 
-[node name="DICA" type="Node2D"]
+[node name="DICA" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

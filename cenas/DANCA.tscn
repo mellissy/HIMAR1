@@ -8,7 +8,9 @@
 [ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_jqpse"]
 [ext_resource type="AudioStream" uid="uid://bml3j2jtwjeay" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_dj3n2"]
 
-[node name="DANCA" type="Node2D"]
+[node name="DANCA" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("6")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var cidades ={
 	"São Luís": [ "res://tudo/imagens/mapa/telaSaoLuis2.jpg" ],
@@ -74,6 +74,7 @@ func _ready():
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
+	Global.outra_cidade = current
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -88,21 +89,24 @@ func _ready():
 	
 	
 	$penas.texture = load(penas["pena"][num2])
-	$Sprite2D.texture = load(cidades[current][0])
-	$estamos_em.text = " Você está em " + current +"!"
 	
-	$dica1.position = position_b[current][0]
-	$dica2.position = position_b[current][1]
-	$dica3.position = position_b[current][2]
 	
-	$dica1.size = size_b[current][0]
-	$dica2.size = size_b[current][1]
-	$dica3.size = size_b[current][2]
+	
+	$Sprite2D.texture = load(cidades[Global.cidade][0])
+	$estamos_em.text = " Você está em " + Global.cidade +"!"
+	
+	$dica1.position = position_b[Global.cidade][0]
+	$dica2.position = position_b[Global.cidade][1]
+	$dica3.position = position_b[Global.cidade][2]
+	
+	$dica1.size = size_b[Global.cidade][0]
+	$dica2.size = size_b[Global.cidade][1]
+	$dica3.size = size_b[Global.cidade][2]
 
 	pass
 	
 func _on_botao2_pressed():
-	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
+	get_tree().change_scene_to_file("res://cenas/certeza.tscn"  )
 	
 	pass # Replace with function body.
 
@@ -136,4 +140,10 @@ func _on_dica3_pressed():
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
+	pass # Replace with function body.
+
+
+func _on_voltar_cidade_pressed():
+	
+	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.
