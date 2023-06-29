@@ -25,7 +25,9 @@ func _on_cidade_antiga_pressed():
 	if Global.anterior == false:
 		Global.cidade = city
 		Global.anterior = true
+		Global.pontos = Global.pontos - 100
 		get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
+		
 	pass # Replace with function body.
 
 

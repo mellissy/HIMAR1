@@ -124,8 +124,8 @@ func _ready():
 	$dica3.size = size_b[Global.cidade][2]
 	$moita.position = moita[Global.cidade][0]
 	pontuacao()
-	print(Global.nome)
-	print(Global.pontos)
+	#print(Global.nome)
+	#print(Global.pontos)
 	pass
 
 func moveu(cenaout, cenain):
@@ -194,12 +194,24 @@ func _on_timer_timeout():
 	pass # Replace with function body.
 
 func pontuacao():
-	print(Global.cidade)
-	if Global.cidade == ("São Luís") or("Grajaú") or ("Imperatriz") or ("Pindaré") or ("Barreirinhas") or ("Codó")or ("Alcântara"):
+	
+
+	if Global.cidade in ("São Luís"):# or("Grajaú") or ("Imperatriz") or ("Pindaré") or ("Barreirinhas") or ("Codó")or ("Alcântara"):
 		Global.pontos = pontos + 100
-	elif Global.cidade ==   ("Caxias") or ("Carolina") or ("Santa Inês") or ("Viana")or ("Carutapera") or("Guimarães")or("Buriticupu"): 
-		Global.pontos = pontos - 70
+	elif Global.cidade in    ("Grajaú"): 
+		Global.pontos = pontos + 100
+	elif Global.cidade in    ("Imperatriz"): 
+		Global.pontos = pontos + 100
+	elif Global.cidade in    ("Pindaré"): 
+		Global.pontos = pontos + 100
+	elif Global.cidade in    ("Barreirinhas"): 
+		Global.pontos = pontos + 100
+	elif Global.cidade in    ("Codó"): 
+		Global.pontos = pontos + 100
+	elif Global.cidade in    ("Alcântara"): 
+		Global.pontos = pontos + 100
 	else: 
-		Global.pontos = pontos- 70
-		
+		Global.pontos = pontos - 110
+	print(Global.pontos)
+	print(Global.cidade+"*******")
 		

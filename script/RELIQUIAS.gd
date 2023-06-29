@@ -4,7 +4,7 @@ var current = " "
 var num2
 func _ready():
 	
-	
+	Global.pontos = Global.pontos + 100
 	current = Global.cidade
 	num2 = Global.pena
 	

@@ -9,13 +9,13 @@ extends Control
 	"Imperatriz": [
 		
 		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobre um atentado contra um tal de Leão Leda.     ",
-		"'Mirmã' não sei nada não! Passou um suspeito por aqui, mas dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no sertão do maranhão. Que parece, aconteceu no final do século XIX e no inicio do século XX."  ,
+		"'Mirmã' não sei nada não! Passou um suspeito por aqui, mas não dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no sertão do maranhão. Que parece, aconteceu no final do século XIX e no inicio do século XX."  ,
 		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
 	],
 	"Grajaú": [
-	"Um suspeito tinha me dito que um novo município estava sendo gerado a partir da cidade de monção que se chamava engenho de São Pedro de Alcântara.",
-	"Sim, passou sim, ele falou que estava indo para uma cidade com um engenho que estava prestes a fechar, pois a indústria açucareira entrou em decadência.",
-	"Um suspeito passou dizendo que ia presenciar a construção da  ferrovia que faz ligação ao engenho central e ao porto terminal dos canaviais."
+	"Siim. Um suspeito havia me imformado que um novo município estava sendo gerado a partir da cidade de monção. Ah, ele também disse que esse municipio se chama Engenho de São Pedro de Alcântara.",
+	"Sim, ele me afirmou que estava indo para uma cidade aí. Não lembro o nome, mas sei que lá tem um Engenho quase fechando as portas por causa da decadência da indústria açucareira.",
+	"Siô. Agora pouco passou um  suspeito dizendo que ia presenciar a construção da  ferrovia que faz ligação ao Engenho Central e ao porto Terminal dos Canaviais."
 
 	],
 	"Carutapera": [
@@ -24,9 +24,9 @@ extends Control
 		"nenhuma pessoa suspeita passou por aqui"
 	],
 	"Pindaré": [
-	"Um suspeito disse que iria para inauguração da primeira indústria da cidade. Ele também disse que a indústria iria se chamar de companhia manufatureira e agrícola. ",
-	"Uma pessoa suspeita   tinha me dito que  depois  que o presidente Afonso Pena veio visitar o Estado foi decidido  que iriam colocar uma estação ferroviária em uma cidade da região dos cocais, ele disse que a estrada de ferro é de São Luís até Cajazeira.",
-	"Uma pessoa disse para um senhor que estava indo para o leste do estado, atrás de uma cidade da umbanda. "
+	"Tinha uma pessoa bem estranha por aqui mesmo. Ele disse que iria para inauguração da primeira indústria da cidade. Aparentemente essa  indústria se chama Companhia Manufatureira e Agrícola. ",
+	"Uma pessoa suspeita    me falou que  depois da visita do presidente Afonso Pena no Estado, foi decidido  que iria ser colocado uma estação ferroviária em uma cidade da região dos cocais, ele disse que a estrada de ferro vai de São Luís até Cajazeira.",
+	"Eu ouvi uma pessoa muito suspeita dizendo para um senhor que estava indo para o leste do Estado, atrás de uma cidade da umbanda. "
 
 	],
 	"Alcântara": [ 
@@ -55,13 +55,13 @@ extends Control
 		"Por aqui não passou ninguém estranho"
 	],
 	"Barreirinhas": [ 
-	"Um suspeito passou dizendo que ia participar do debate contra os higiênitas para não demolirem a cidade, não entendi nada.",
-	"Acho que sim, uma pessoa estranha disse que estava indo para uma cidade onde os edifícios estavam ficando arruinados e as pessoas estavam indo embora de lá.",
-	"Um suspeito disse que estava a caminho da cidade que foi a maior indústria do estado, mas que está decaindo aos poucos depois da abolição da escravatura."
+	"Uma pessoa muito estranho passou por aqui agorinha, ele disse que estava indo participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
+	"Rapaz, parece que siim, tinha uma pessoa aqui  dizendo que estava indo para uma cidade aí, disse que os edifícios estavam ficando ruins e as pessoas estavam indo embora de lá, não sei oque ele quis dizer com isso. ",
+	"Havia uma pessoa bem suspeito por aqui, ela me disse que estava a caminho da cidade que foi a maior indústria do Estado, mas que está decaindo aos poucos depois da abolição da escravatura, na verdade achei isso tudo bem estranho."
 	],
 	"Codó": [
-	" Siô, uma pessoa estranho esses dias me perguntou na rua pra que rumo ficam os lençóis maranhenses. Acho que muita gente como ele tá se interessando em conhecer esse lugar, afinal, começaram a divulgar bastante as belezas naturais de lá. Ou então ele queria arrumar emprego, porque a demanda de lá deve aumentar agora com essas divulgações,",
-	"Rapaz, um dia desse passou um homem perguntando por um lugar que haviam descoberto pertróleo aqui no Maranhão. Eu não me lembro direito, mas um pessoal respondeu a ele que nesse lugar tinha umas dunas de areia. Agora eu mesmo não sei onde fica isso, você sabe!?",
+	" Siô, uma pessoa estranha esses dias me perguntou na rua pra que rumo ficam os lençóis maranhenses. Acho que muita gente como ele tá se interessando em conhecer esse lugar, afinal, começaram a divulgar bastante as belezas naturais de lá. Ou então ele queria arrumar emprego, porque a demanda de lá deve aumentar agora com essas divulgações.",
+	"Rapaz, um dia desse passou um homem perguntando por um lugar que haviam descoberto petróleo aqui no Maranhão. Eu não me lembro direito, mas um pessoal respondeu a ele que nesse lugar tinha umas dunas de areia. Agora eu mesmo não sei onde fica isso, você sabe!?",
 	"Meu fi, esses dias um rapaz me perguntou onde ficava um lugar que tinha acabado de se emancipar lá pro norte. Eu não soube respondê-lo, mas ele, convicto, disse que estava a caminho de lá"
 	],
 	"Santa Inês": [

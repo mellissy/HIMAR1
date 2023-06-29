@@ -78,6 +78,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="menu" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 105.0
 offset_top = 455.0
 offset_right = 328.0

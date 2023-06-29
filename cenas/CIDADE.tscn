@@ -107,13 +107,6 @@ texture = ExtResource("7")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_3ix77")
 
-[node name="voltar_cidade" type="Button" parent="."]
-layout_mode = 0
-offset_left = 275.0
-offset_top = 597.0
-offset_right = 340.0
-offset_bottom = 625.0
-
 [node name="moita" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 146.0
@@ -132,6 +125,5 @@ autostart = true
 [connection signal="pressed" from="dica1" to="." method="_on_dica1_pressed"]
 [connection signal="pressed" from="dica2" to="." method="_on_dica2_pressed"]
 [connection signal="pressed" from="dica3" to="." method="_on_dica3_pressed"]
-[connection signal="pressed" from="voltar_cidade" to="." method="_on_voltar_cidade_pressed"]
 [connection signal="pressed" from="moita" to="." method="_on_moita_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

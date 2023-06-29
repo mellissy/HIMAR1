@@ -9,5 +9,5 @@ var cont = 1
 var anterior = true
 
 ############## DADOS DO JOGO #####################
-var nome = " fulano"
+var nome = "-------"
 var pontos = 0.0
