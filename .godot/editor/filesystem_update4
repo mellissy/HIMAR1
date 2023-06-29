@@ -1,1 +1,5 @@
 res://default_env.tres
+res://cenas/MENU.tscn
+res://script/NOVO_JOGO.gd
+res://script/CIDADE.gd
+res://script/RANKING.gd

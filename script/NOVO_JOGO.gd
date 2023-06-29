@@ -1,7 +1,5 @@
 extends Control
 
-#const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
-#const sqlite = preload("res://addons/godot-sqlite/godot-sqlite.gd")
 const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
 var db
 var db_name = "res://SQLite/database.db"
@@ -30,7 +28,7 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	
 	pass
-	
+
 func _insertDB():
 	var name = $TextEdit.get_text().strip_edges()
 	if name == "":
@@ -48,20 +46,13 @@ func _insertDB():
 	db.close_db()
 	return true
 
-
 func _on_botao3_pressed():
 	get_tree().change_scene_to_file("res://cenas/COMECAR.tscn" )
 	pass # Replace with function body.
 
 
 func _on_botao2_pressed():
-<<<<<<< Updated upstream
-	
 	Global.nome = $TextEdit.text
-	
-	get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
-=======
 	if _insertDB():
 		get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
->>>>>>> Stashed changes
 	pass # Replace with function body.

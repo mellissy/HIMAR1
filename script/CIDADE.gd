@@ -90,16 +90,13 @@ var current = ""
 var num1 
 var num2 
 var pontos = Global.pontos
+
 func _ready():
 	
-<<<<<<< Updated upstream
-=======
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
 	
-	
->>>>>>> Stashed changes
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
@@ -131,8 +128,6 @@ func _ready():
 	print(Global.pontos)
 	pass
 
-	
-	
 func moveu(cenaout, cenain):
 	db.query_with_bindings("select * from infojogador where status = '1';")
 	var player = db.query_result
