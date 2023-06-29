@@ -1,5 +1,9 @@
 extends Control
 
+const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
+var db
+var db_name = "res://SQLite/database.db"
+
 @onready var cidades ={
 	"São Luís": [ "res://tudo/imagens/mapa/telaSaoLuis2.jpg" ],
 	"Grajaú": ["res://tudo/imagens/mapa/mapa_grajau.jpg"  ],
@@ -88,6 +92,14 @@ var num2
 var pontos = Global.pontos
 func _ready():
 	
+<<<<<<< Updated upstream
+=======
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
+	
+	
+>>>>>>> Stashed changes
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
@@ -119,6 +131,16 @@ func _ready():
 	print(Global.pontos)
 	pass
 
+	
+	
+func moveu(cenaout, cenain):
+	db.query_with_bindings("select * from infojogador where status = '1';")
+	var player = db.query_result
+	db.query_with_bindings("select pont from pontos where cenaout = ? and cenain = ?;", [cenaout, cenain])
+	var incremento = db.query_result
+	db.query_with_bindings("""update infojogador set score = ? where
+	 	id = ?;""", [player[0].score+incremento[0].pont, player[0].id])
+	db.close()
 	
 func _on_botao2_pressed():
 	get_tree().change_scene_to_file("res://cenas/certeza.tscn"  )

@@ -1,5 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cja5xn75nq6u2"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cuq6ecagprp01" path="res://tudo/imagens/menu/menuPrincipalSemBotao.jpg" id="1"]
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
@@ -7,6 +8,15 @@
 [ext_resource type="Script" path="res://script/MENU.gd" id="5"]
 [ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_ynpfy"]
 [ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_bb23b"]
+=======
+[ext_resource type="Texture2D" uid="uid://cfpf40fcx0vfi" path="res://tudo/imagens/menu/menuPrincipalSemBotao.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://dx8k1xkshcx0y" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b5afaq348htus" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://ddh5845806dhh" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Script" path="res://script/MENU.gd" id="5"]
+[ext_resource type="FontFile" uid="uid://dc44nd7ypqa4x" path="res://tudo/fonts/BRITANIC.TTF" id="6_ynpfy"]
+[ext_resource type="AudioStream" uid="uid://kcqv1dbuarg6" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_bb23b"]
+>>>>>>> Stashed changes
 
 [node name="MENU" type="Control"]
 layout_mode = 3

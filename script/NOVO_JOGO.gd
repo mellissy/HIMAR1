@@ -1,7 +1,20 @@
 extends Control
 
+#const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
+#const sqlite = preload("res://addons/godot-sqlite/godot-sqlite.gd")
+const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
+var db
+var db_name = "res://SQLite/database.db"
 
 func _ready():
+	
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
+	db.query("update infojogador set status = '0';")
+	db.close_db()
+	db.open_db()
+	
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -17,6 +30,23 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	
 	pass
+	
+func _insertDB():
+	var name = $TextEdit.get_text().strip_edges()
+	if name == "":
+		return false
+	db.query_with_bindings("select * from infojogador where nome = ?;", [name])
+	var player = db.query_result
+	if len(player) == 0:
+		db.query_with_bindings("insert into infojogador (nome) values (?);", [name])
+		db.close_db()
+		db.open_db()
+		db.query_with_bindings("select * from infojogador where nome = ?;", [name])
+		player = db.query_result
+	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0]["id"]])
+	
+	db.close_db()
+	return true
 
 
 func _on_botao3_pressed():
@@ -25,8 +55,13 @@ func _on_botao3_pressed():
 
 
 func _on_botao2_pressed():
+<<<<<<< Updated upstream
 	
 	Global.nome = $TextEdit.text
 	
 	get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
+=======
+	if _insertDB():
+		get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
+>>>>>>> Stashed changes
 	pass # Replace with function body.

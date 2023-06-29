@@ -24,6 +24,11 @@ Global="*res://script/GLOBAL.gd"
 window/size/viewport_width=350
 window/size/initial_position_type=0
 window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="HIMAR1"
 
 [gui]
 

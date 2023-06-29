@@ -1,5 +1,12 @@
 res://default_env.tres
+<<<<<<< Updated upstream
 res://cenas/NOVO_JOGO.tscn
 res://script/CIDADE.gd
 res://cenas/RANKING.tscn
 res://cenas/CIDADE.tscn
+=======
+res://cenas/MENU.tscn
+res://script/NOVO_JOGO.gd
+res://script/RANKING.gd
+res://script/CIDADE.gd
+>>>>>>> Stashed changes
