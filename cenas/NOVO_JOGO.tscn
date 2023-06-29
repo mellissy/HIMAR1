@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://cch7d0mr8tk8k"]
 
-[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="4"]
 [ext_resource type="Script" path="res://script/NOVO_JOGO.gd" id="5"]
-[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
-[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_80sd6"]
-[ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_qgb01"]
+[ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_80sd6"]
+[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_qgb01"]
 
 [sub_resource type="CanvasItemMaterial" id="2"]
 blend_mode = 2
@@ -23,6 +23,7 @@ texture = ExtResource("6")
 offset = Vector2(189.422, -184.272)
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 116.0
 offset_top = 103.0
 offset_right = 339.0
@@ -43,6 +44,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 115.0
 offset_top = 227.0
 offset_right = 338.0
@@ -63,6 +65,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 116.0
 offset_top = 442.0
 offset_right = 339.0
@@ -85,6 +88,7 @@ vertical_alignment = 1
 [node name="TextEdit" type="TextEdit" parent="."]
 material = SubResource("2")
 use_parent_material = true
+layout_mode = 0
 offset_left = 74.0
 offset_top = 167.0
 offset_right = 291.0

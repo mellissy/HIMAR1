@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://in1d12k67snp"]
 
-[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://jwwvg7cj0d4x" path="res://tudo/imagens/menu/comeca.jpg" id="5"]
+[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="5"]
 [ext_resource type="Script" path="res://script/CAZUMBAR.gd" id="6"]
-[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_bj3ri"]
-[ext_resource type="FontFile" uid="uid://bnfy8yxuft3q2" path="res://tudo/fonts/vademecum.ttf" id="7_18jo8"]
-[ext_resource type="AudioStream" uid="uid://rnhfvrkvbj2k" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="8_o06h3"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_bj3ri"]
+[ext_resource type="FontFile" uid="uid://qbn1wgjqfo6f" path="res://tudo/fonts/vademecum.ttf" id="7_18jo8"]
+[ext_resource type="AudioStream" uid="uid://cg032tfgleych" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="8_o06h3"]
 
 [node name="CAZUMBAR" type="Control"]
 layout_mode = 3
@@ -21,6 +21,7 @@ texture = ExtResource("5")
 offset = Vector2(178.487, -137.748)
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 109.0
 offset_top = 106.0
 offset_right = 332.0
@@ -41,6 +42,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 109.0
 offset_top = 267.0
 offset_right = 332.0
@@ -61,6 +63,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 110.0
 offset_top = 333.0
 offset_right = 333.0
@@ -81,6 +84,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao4" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 110.0
 offset_top = 399.0
 offset_right = 333.0
@@ -101,6 +105,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 88.0
 offset_top = 168.0
 offset_right = 267.0

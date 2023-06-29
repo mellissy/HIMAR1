@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cja5xn75nq6u2"]
 
-[ext_resource type="Texture2D" uid="uid://dsvww6iywx0pb" path="res://tudo/imagens/menu/menuPrincipalSemBotao.jpg" id="1"]
-[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cuq6ecagprp01" path="res://tudo/imagens/menu/menuPrincipalSemBotao.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="4"]
 [ext_resource type="Script" path="res://script/MENU.gd" id="5"]
-[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_ynpfy"]
-[ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_bb23b"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_ynpfy"]
+[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_bb23b"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
@@ -26,6 +26,7 @@ scale = Vector2(0.5, 0.52)
 texture = ExtResource("1")
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 102.0
 offset_top = 220.0
 offset_right = 325.0
@@ -47,6 +48,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 101.0
 offset_top = 284.0
 offset_right = 324.0
@@ -68,6 +70,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 101.0
 offset_top = 348.0
 offset_right = 324.0
@@ -89,6 +92,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao4" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 103.0
 offset_top = 414.0
 offset_right = 326.0

@@ -3,6 +3,11 @@ extends Control
 
 func _ready():
 	$AudioStreamPlayer2D.play(2)
+	$nome.text = Global.nome
+	$nome.modulate = Color(0,0,0,1)
+	var pontos = str(Global.pontos)
+	$pontos.text = pontos
+	$pontos.modulate = Color(0,0,0,1)
 	pass
 
 

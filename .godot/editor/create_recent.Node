@@ -1,8 +1,8 @@
-Button
+Timer
+Label
 Sprite2D
 TextureButton
-Label
+Button
 Control
 AudioStreamPlayer2D
 AudioListener2D
-Timer

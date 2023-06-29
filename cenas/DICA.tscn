@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bs60ehaxylsw"]
 
-[ext_resource type="Texture2D" uid="uid://bbi4l20vng6gp" path="res://tudo/imagens/personagens/alcantara/Joao.jpg" id="1"]
-[ext_resource type="Texture2D" uid="uid://c70tebe40u3no" path="res://tudo/Botoes/botao.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://d0jimo2cogowt" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://dvgepqspomoav" path="res://tudo/Botoes/BotaoClique.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dha3336i7280o" path="res://tudo/imagens/personagens/alcantara/Joao.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
 [ext_resource type="Script" path="res://script/DICA.gd" id="6"]
-[ext_resource type="FontFile" uid="uid://dccqymvo64o1x" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
 
 [node name="DICA" type="Control"]
 layout_mode = 3
@@ -19,6 +19,7 @@ texture = ExtResource("1")
 offset = Vector2(0, 520.197)
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 195.0
 offset_top = 10.0
 offset_right = 418.0
@@ -40,6 +41,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 37.0
 offset_top = 11.0
 offset_right = 260.0
@@ -61,6 +63,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 63.0
 offset_top = 454.0
 offset_right = 284.0

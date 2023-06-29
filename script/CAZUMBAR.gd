@@ -35,6 +35,7 @@ func _ready():
 	num1 =Global.botao
 	num2 =Global.pena
 	
+	
 	$Label.text = "Estamos em "+ current + "\n Vamos para onde?"
 	$botao2/Label.text = (path[current][0])
 	$botao2/Label.modulate = Color(0,0,0,1)
@@ -42,24 +43,31 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	$botao4/Label.text = (path[current][2])
 	$botao4/Label.modulate = Color(0,0,0,1)
+	
 	pass
+	
 
 func _on_botao1_pressed():
 	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn"  )
 	pass # Replace with function body.
-
+	
 func _on_botao2_pressed():
+	Global.outra_cidade = current
 	Global.cidade = path[current][0]
+	Global.anterior = false
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao3_pressed():
+	Global.outra_cidade = current
 	Global.cidade = path[current][1]
+	Global.anterior = false
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao4_pressed():
+	Global.outra_cidade = current
 	Global.cidade = path[current][2]
-	
+	Global.anterior = false
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.

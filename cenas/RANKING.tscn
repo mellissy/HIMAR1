@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnqdmj4qyoj22"]
+[gd_scene load_steps=5 format=3 uid="uid://dnqdmj4qyoj22"]
 
 [ext_resource type="Script" path="res://script/RANKING.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://corxrhq6k7pq" path="res://tudo/imagens/menu/menu_ranking.jpeg" id="2"]
-[ext_resource type="AudioStream" uid="uid://dm8yv0o2o8jt8" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="3_p0iwm"]
+[ext_resource type="Texture2D" uid="uid://b27avxvd7okya" path="res://tudo/imagens/menu/menu_ranking.jpeg" id="2"]
+[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="3_p0iwm"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="4_2ygfe"]
 
 [node name="RANKING" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ scale = Vector2(0.5, 0.52)
 texture = ExtResource("2")
 
 [node name="voltar" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 108.0
 offset_top = 436.0
 offset_right = 244.0
@@ -22,5 +24,24 @@ offset_bottom = 476.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_p0iwm")
+
+[node name="nome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 225.0
+offset_right = 158.0
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("4_2ygfe")
+theme_override_font_sizes/font_size = 20
+
+[node name="pontos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 222.0
+offset_right = 303.0
+offset_bottom = 401.0
+theme_override_fonts/font = ExtResource("4_2ygfe")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

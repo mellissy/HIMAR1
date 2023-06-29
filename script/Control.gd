@@ -1,14 +1,16 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	$Label.modulate = Color(0,0,0,1)
-	$Label.text= " Você quer voltar para o menu?"
-	$sim/Label.modulate = Color(0,0,0,1)
-	$sim/Label.text= " Sim"
-	$nao/Label.modulate = Color(0,0,0,1)
-	$nao/Label.text= "Não"
+	$Label.text= " Você quer voltar para onde?"
+	$cidade_antiga/Label.modulate = Color(0,0,0,1)
+	$cidade_antiga/Label.text= "Cidade anterior"
+	$cidade_atual/Label.modulate = Color(0,0,0,1)
+	$cidade_atual/Label.text= "Cidade atual"
+	$menu/Label.text = "Menu"
+	$menu/Label.modulate = Color(0,0,0,1)
 	
 	pass # Replace with function body.
 
@@ -17,13 +19,21 @@ func _ready():
 func _process(delta):
 	
 	pass
+var city = Global.outra_cidade
 
-
-func _on_sim_pressed():
-	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
+func _on_cidade_antiga_pressed():
+	if Global.anterior == false:
+		Global.cidade = city
+		Global.anterior = true
+		get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.
 
 
-func _on_nao_pressed():
-	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn"  )
+func _on_cidade_atual_pressed():
+	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
+	pass # Replace with function body.
+
+
+func _on_menu_pressed():
+	get_tree().change_scene_to_file("res://cenas/MENU.tscn" )
 	pass # Replace with function body.

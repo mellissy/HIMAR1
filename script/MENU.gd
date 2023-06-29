@@ -2,7 +2,6 @@ extends Control
 
 
 func _ready():
-	print(Global.som)
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:

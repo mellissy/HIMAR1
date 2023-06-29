@@ -65,16 +65,32 @@ extends Control
 	"Santa Inês": [ Vector2(80,60),Vector2(40,100),Vector2(70,80) ],
 	"Viana": [ Vector2(80,60),Vector2(70,70),Vector2(65,60) ],
 	}
+@onready var moita = {
+	"São Luís":  [Vector2(190,290)],
+	"Grajaú":  [Vector2(160,360)],
+	"Imperatriz":  [Vector2(230,270)],
+	"Alcântara":  [Vector2(75,330)],
+	"Pindaré": [Vector2(123,280)],
+	"Carutapera": [Vector2(225,250)],
+	"Guimarães":  [Vector2(100,300)],
+	"Buriticupu": [Vector2(160,430)],
+	"Barreirinhas":  [Vector2(200,408)],
+	"Caxias":  [Vector2(145,300)],
+	"Codó":  [Vector2(180,350)],
+	"Carolina":  [Vector2(100,290)],
+	"Santa Inês":  [Vector2(230,210)],
+	"Viana":  [Vector2(146,338)],
+}
 
 var current = ""
 var num1 
 var num2 
-
+var pontos = Global.pontos
 func _ready():
+	
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
-	Global.outra_cidade = current
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -85,12 +101,7 @@ func _ready():
 	$botao2/Label.modulate = Color(0,0,0,1)
 	$estamos_em.modulate = Color(0,0,0,1)
 	
-	
-	
-	
 	$penas.texture = load(penas["pena"][num2])
-	
-	
 	
 	$Sprite2D.texture = load(cidades[Global.cidade][0])
 	$estamos_em.text = " Você está em " + Global.cidade +"!"
@@ -102,8 +113,12 @@ func _ready():
 	$dica1.size = size_b[Global.cidade][0]
 	$dica2.size = size_b[Global.cidade][1]
 	$dica3.size = size_b[Global.cidade][2]
-
+	$moita.position = moita[Global.cidade][0]
+	pontuacao()
+	print(Global.nome)
+	print(Global.pontos)
 	pass
+
 	
 func _on_botao2_pressed():
 	get_tree().change_scene_to_file("res://cenas/certeza.tscn"  )
@@ -145,5 +160,29 @@ func _on_dica3_pressed():
 
 func _on_voltar_cidade_pressed():
 	
-	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.
+
+
+func _on_moita_pressed():
+	get_tree().change_scene_to_file("res://cenas/sobre_a_cidade.tscn" )
+	pass # Replace with function body.
+
+var num=0
+func _on_timer_timeout():
+	if num%2==0:
+		$moita.flip_h = true
+	else: 
+		$moita.flip_h = false
+	num= num+1
+	pass # Replace with function body.
+
+func pontuacao():
+	print(Global.cidade)
+	if Global.cidade == ("São Luís") or("Grajaú") or ("Imperatriz") or ("Pindaré") or ("Barreirinhas") or ("Codó")or ("Alcântara"):
+		Global.pontos = pontos + 100
+	elif Global.cidade ==   ("Caxias") or ("Carolina") or ("Santa Inês") or ("Viana")or ("Carutapera") or("Guimarães")or("Buriticupu"): 
+		Global.pontos = pontos - 70
+	else: 
+		Global.pontos = pontos- 70
+		
+		

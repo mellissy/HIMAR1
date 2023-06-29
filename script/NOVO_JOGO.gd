@@ -25,5 +25,8 @@ func _on_botao3_pressed():
 
 
 func _on_botao2_pressed():
+	
+	Global.nome = $TextEdit.text
+	
 	get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
 	pass # Replace with function body.
