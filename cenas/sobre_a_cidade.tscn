@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbg272e5gme3i"]
+[gd_scene load_steps=8 format=3 uid="uid://cbg272e5gme3i"]
 
 [ext_resource type="Script" path="res://script/sobre_a_cidade.gd" id="1_6e22r"]
-[ext_resource type="Texture2D" uid="uid://dr6s1blso72yw" path="res://tudo/imagens/outros/sobre_a_cidade.jpeg" id="1_a2qef"]
+[ext_resource type="Texture2D" uid="uid://cyssaemvhk78f" path="res://tudo/imagens/outros/sobre_a_cidade_c.jpeg" id="2_3ld32"]
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3_wdv41"]
+[ext_resource type="Texture2D" uid="uid://co065ow1di8gp" path="res://tudo/imagens/outros/cazumba.png" id="3_y1ayk"]
 [ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4_q5ha4"]
 [ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5_u2uqo"]
 [ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_bx4k6"]
 
-[node name="sobre_a_cidade" type="Control"]
+[node name="ti" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,19 +20,28 @@ script = ExtResource("1_6e22r")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(175, 325)
 scale = Vector2(0.359343, 0.471959)
-texture = ExtResource("1_a2qef")
+texture = ExtResource("2_3ld32")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -375.686
-offset_top = -580.559
-offset_right = 125.314
-offset_bottom = -235.559
-theme_override_fonts/font = ExtResource("6_bx4k6")
-theme_override_font_sizes/font_size = 30
+offset_left = -445.257
+offset_top = -578.44
+offset_right = 208.743
+offset_bottom = -245.44
+theme_override_font_sizes/font_size = 25
+text = "uuuuuuuuuuuuuuuu"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="cazumba" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(5.5657, 6.10352e-05)
+scale = Vector2(0.895, 0.9)
+skew = -0.0331613
+texture = ExtResource("3_y1ayk")
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 101.0
 offset_top = 587.0
 offset_right = 324.0
@@ -52,4 +62,9 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
 [connection signal="pressed" from="botao1" to="." method="_on_botao_1_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

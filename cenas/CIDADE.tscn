@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://pmtvoqxyqs3x"]
+[gd_scene load_steps=13 format=3 uid="uid://pmtvoqxyqs3x"]
 
 [ext_resource type="Texture2D" uid="uid://c4k5jy4vdyx4" path="res://tudo/imagens/mapa/Viana.jpg" id="2"]
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://cg032tfgleych" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="9_3ix77"]
 [ext_resource type="Texture2D" uid="uid://8hhovmo0xuub" path="res://tudo/imagens/outros/moita_png.png" id="10_0y7vt"]
 [ext_resource type="Script" path="res://script/moita.gd" id="11_jysij"]
+[ext_resource type="Texture2D" uid="uid://dx22aogut5ack" path="res://tudo/imagens/outros/fogo.png" id="12_cg62u"]
 
 [node name="CIDADE" type="Control"]
 layout_mode = 3
@@ -118,7 +119,21 @@ texture_normal = ExtResource("10_0y7vt")
 script = ExtResource("11_jysij")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
+
+[node name="fogo" type="Sprite2D" parent="."]
+position = Vector2(288.315, 556.871)
+scale = Vector2(0.389493, 0.422222)
+skew = -0.0837758
+texture = ExtResource("12_cg62u")
+
+[node name="fogo2" type="Sprite2D" parent="."]
+position = Vector2(321.379, 536.678)
+scale = Vector2(0.423913, 0.373871)
+skew = -0.0837758
+texture = ExtResource("12_cg62u")
+flip_h = true
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
 [connection signal="pressed" from="botao2" to="." method="_on_botao2_pressed"]

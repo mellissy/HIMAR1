@@ -96,7 +96,9 @@ func _ready():
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
-	
+	if Global.cidade == "Carolina":
+		$fogo.visible = false
+		$fogo2.visible = false
 	current =Global.cidade
 	num1 = Global.botao
 	num2 =Global.pena
@@ -124,8 +126,7 @@ func _ready():
 	$dica3.size = size_b[Global.cidade][2]
 	$moita.position = moita[Global.cidade][0]
 	pontuacao()
-	#print(Global.nome)
-	#print(Global.pontos)
+	
 	pass
 
 func moveu(cenaout, cenain):
@@ -185,17 +186,35 @@ func _on_moita_pressed():
 	pass # Replace with function body.
 
 var num=0
+var move = true
+var cont
 func _on_timer_timeout():
 	if num%2==0:
 		$moita.flip_h = true
 	else: 
 		$moita.flip_h = false
 	num= num+1
+	#cont = cont +1
+	if move == true:
+		$fogo.skew = 0.1
+		$fogo.position.y = $fogo.position.y -10
+		$fogo2.skew = 0.1
+		$fogo2.position.y = $fogo2.position.y -10
+		move = false
+		
+	else:
+		$fogo.skew = -0.2
+		$fogo2.skew = -0.2
+		move = true
+		$fogo.position.y = $fogo.position.y +10
+		$fogo2.position.y = $fogo2.position.y +10
+	#if cont >4:
+	#	cont =0
+	
 	pass # Replace with function body.
 
 func pontuacao():
 	
-
 	if Global.cidade in ("São Luís"):# or("Grajaú") or ("Imperatriz") or ("Pindaré") or ("Barreirinhas") or ("Codó")or ("Alcântara"):
 		Global.pontos = pontos + 100
 	elif Global.cidade in    ("Grajaú"): 
@@ -210,8 +229,24 @@ func pontuacao():
 		Global.pontos = pontos + 100
 	elif Global.cidade in    ("Alcântara"): 
 		Global.pontos = pontos + 100
-	else: 
-		Global.pontos = pontos - 110
+	elif Global.cidade in    ("Carutapera"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Guimarães"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Buriticupu"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Carolina"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Viana"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Santa Inês"): 
+		Global.pontos = pontos - 50
+	elif Global.cidade in    ("Caxias"): 
+		Global.pontos = pontos - 50
+		
+		
+	#else: 
+	#	Global.pontos = pontos - 110
 	print(Global.pontos)
 	print(Global.cidade+"*******")
 		

@@ -19,6 +19,8 @@ func _ready():
 func _process(delta):
 	
 	pass
+	
+	
 var city = Global.outra_cidade
 
 func _on_cidade_antiga_pressed():

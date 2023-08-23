@@ -1,14 +1,13 @@
 res://default_env.tres
-<<<<<<< Updated upstream
 res://cenas/MENU.tscn
-res://script/NOVO_JOGO.gd
-res://script/CIDADE.gd
-res://script/RANKING.gd
-=======
-res://cenas/NOVO_JOGO.tscn
-res://script/DICA.gd
-res://cenas/RANKING.tscn
-res://cenas/CIDADE.tscn
+res://cenas/DICA.tscn
 res://cenas/certeza.tscn
+res://cenas/sobre_a_cidade.tscn
+res://cenas/CIDADE.tscn
+res://cenas/CAZUMBAR.tscn
+res://cenas/COMECAR.tscn
+res://cenas/control_teste.tscn
 res://cenas/RELIQUIAS.tscn
->>>>>>> Stashed changes
+res://cenas/RANKING.tscn
+res://cenas/VIDEO_INICIAL.tscn
+res://script/CIDADE.gd

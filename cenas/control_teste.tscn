@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://be4mdl1j5q54i"]
 
-[ext_resource type="Texture2D" uid="uid://vk4bpdq2otnv" path="res://tudo/imagens/personagens/alcantara/Zezinho.jpg" id="1_imyyc"]
+[ext_resource type="Texture2D" uid="uid://4hwcb4q2xy4k" path="res://tudo/imagens/personagens/alcantara/Zezinho.jpg" id="1_imyyc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
