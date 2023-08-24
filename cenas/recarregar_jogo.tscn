@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq7t5astiuf2m"]
+
+[ext_resource type="Script" path="res://script/RECARREGAR_JOGO.gd" id="1_wnmjs"]
+[ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="2_0u26l"]
+[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3_gpiws"]
+[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4_3t4uh"]
+[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5_5uahl"]
+[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_hgube"]
+[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_0rtmg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kxdxw"]
+blend_mode = 2
+
+[node name="RECARREGAR_JOGO" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wnmjs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(85, 416)
+scale = Vector2(0.5, 0.52)
+texture = ExtResource("2_0u26l")
+offset = Vector2(189.422, -184.272)
+
+[node name="botao1" type="TextureButton" parent="."]
+offset_left = 116.0
+offset_top = 103.0
+offset_right = 339.0
+offset_bottom = 181.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_gpiws")
+texture_pressed = ExtResource("4_3t4uh")
+texture_hover = ExtResource("5_5uahl")
+
+[node name="Label" type="Label" parent="botao1"]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_hgube")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="botao2" type="TextureButton" parent="."]
+offset_left = 115.0
+offset_top = 227.0
+offset_right = 338.0
+offset_bottom = 305.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_gpiws")
+texture_pressed = ExtResource("4_3t4uh")
+texture_hover = ExtResource("5_5uahl")
+
+[node name="Label" type="Label" parent="botao2"]
+layout_mode = 0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_hgube")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="botao3" type="TextureButton" parent="."]
+offset_left = 116.0
+offset_top = 442.0
+offset_right = 339.0
+offset_bottom = 520.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_gpiws")
+texture_pressed = ExtResource("4_3t4uh")
+texture_hover = ExtResource("5_5uahl")
+
+[node name="Label" type="Label" parent="botao3"]
+layout_mode = 0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("6_hgube")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+material = SubResource("CanvasItemMaterial_kxdxw")
+use_parent_material = true
+offset_left = 74.0
+offset_top = 167.0
+offset_right = 291.0
+offset_bottom = 206.0
+
+[node name="OptionButton" type="OptionButton" parent="TextEdit"]
+layout_mode = 0
+offset_right = 216.0
+offset_bottom = 41.0
+item_count = 1
+popup/item_0/text = ""
+popup/item_0/id = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_0rtmg")
+
+[connection signal="pressed" from="botao2" to="." method="_on_botao_2_pressed"]
+[connection signal="pressed" from="botao3" to="." method="_on_botao_3_pressed"]

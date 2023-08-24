@@ -39,5 +39,13 @@ func _on_cidade_atual_pressed():
 
 
 func _on_menu_pressed():
+	
+	
+	Global.vetorNomes[Global.i] = Global.nome 
+	Global.vetorPontos[Global.i] = Global.pontos 
+	Global.i = Global.i +1
+	#Global.vetorNomes[Global.i] = Global.nome
+	#Global.vetorPontos[Global.i] = Global.pontos
+	#Global.i = Global.i +1
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn" )
 	pass # Replace with function body.

@@ -17,11 +17,15 @@ func _ready():
 	var players = db.query_result
 	
 	$AudioStreamPlayer2D.play(2)
-	$nome.text = Global.nome
-	$nome.modulate = Color(0,0,0,1)
-	var pontos = str(Global.pontos)
-	$pontos.text = pontos
-	$pontos.modulate = Color(0,0,0,1)
+	for i in range(0,5):
+		#print(Global.vetorNomes[i])
+		#print(Global.vetorPontos[i])
+	
+		#$nome.text = Global.vetorNomes[i]
+		$nome.modulate = Color(0,0,0,1)
+		var pontos = str(Global.vetorPontos[i])
+		$pontos.text = pontos
+		$pontos.modulate = Color(0,0,0,1)
 	pass
 
 

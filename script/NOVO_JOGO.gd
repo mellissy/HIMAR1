@@ -26,6 +26,10 @@ func _ready():
 	$botao2/Label.modulate= Color(0,0,0,1)
 	$botao3/Label.text ="VOLTAR"
 	$botao3/Label.modulate = Color(0,0,0,1)
+	print(Global.vetorNomes[1])
+	
+	
+	
 	
 	pass
 

@@ -15,6 +15,9 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	$botao4/Label.text= "INSTRUÇÕES"
 	$botao4/Label.modulate = Color(0,0,0,1)
+	for i in range(0,5):
+		print(Global.vetorNomes[i])
+		print(Global.vetorPontos[i])
 	
 	pass
 
