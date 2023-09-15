@@ -27,21 +27,23 @@ stream = ExtResource("3_p0iwm")
 
 [node name="nome" type="Label" parent="."]
 layout_mode = 0
-offset_left = 47.0
+offset_left = 56.0
 offset_top = 225.0
 offset_right = 158.0
 offset_bottom = 394.0
 theme_override_fonts/font = ExtResource("4_2ygfe")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
+text = "bhgvghhvgh"
+horizontal_alignment = 1
 
 [node name="pontos" type="Label" parent="."]
 layout_mode = 0
-offset_left = 183.0
+offset_left = 189.0
 offset_top = 222.0
 offset_right = 303.0
 offset_bottom = 401.0
 theme_override_fonts/font = ExtResource("4_2ygfe")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 horizontal_alignment = 1
 
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

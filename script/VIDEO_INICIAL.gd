@@ -4,6 +4,7 @@ func _ready():
 	Global.cidade = "São Luís"
 	Global.botao = 0
 	Global.pena = 9
+	Global.pontos = 0
 	
 	
 	#$AudioStreamPlayer2D.play()

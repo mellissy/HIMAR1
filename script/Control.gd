@@ -14,18 +14,13 @@ func _ready():
 	
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
 	pass
 	
-	
-var city = Global.outra_cidade
-
 func _on_cidade_antiga_pressed():
 	if Global.anterior == false:
-		Global.cidade = city
+		Global.cidade = Global.outra_cidade
 		Global.anterior = true
 		Global.pontos = Global.pontos - 100
 		get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
@@ -39,13 +34,10 @@ func _on_cidade_atual_pressed():
 
 
 func _on_menu_pressed():
+	Global.vetorNomes[Global.i] = Global.nome
+	Global.vetorOndeParou[Global.i] = Global.cidade
+	Global.vetorPontos[Global.i] = Global.pontos
+	Global.vetVidas[Global.i] =Global.pena
 	
-	
-	Global.vetorNomes[Global.i] = Global.nome 
-	Global.vetorPontos[Global.i] = Global.pontos 
-	Global.i = Global.i +1
-	#Global.vetorNomes[Global.i] = Global.nome
-	#Global.vetorPontos[Global.i] = Global.pontos
-	#Global.i = Global.i +1
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn" )
 	pass # Replace with function body.

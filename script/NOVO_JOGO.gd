@@ -26,7 +26,11 @@ func _ready():
 	$botao2/Label.modulate= Color(0,0,0,1)
 	$botao3/Label.text ="VOLTAR"
 	$botao3/Label.modulate = Color(0,0,0,1)
-	print(Global.vetorNomes[1])
+	var n_vetor
+	n_vetor=Global.vetorNomes.find("")
+	Global.i = n_vetor
+	
+	#print(Global.vetorNomes[Global.i])
 	
 	
 	
@@ -36,6 +40,7 @@ func _ready():
 func _insertDB():
 	var name = $TextEdit.get_text().strip_edges()
 	if name == "":
+		
 		return false
 	db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 	var player = db.query_result
@@ -48,6 +53,7 @@ func _insertDB():
 	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0]["id"]])
 	
 	db.close_db()
+	
 	return true
 
 func _on_botao3_pressed():
@@ -56,6 +62,7 @@ func _on_botao3_pressed():
 
 
 func _on_botao2_pressed():
+	#Global.vetorNomes[Global.i] = $TextEdit.text
 	Global.nome = $TextEdit.text
 	if _insertDB():
 		get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )

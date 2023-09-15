@@ -27,6 +27,7 @@ texture = ExtResource("2_0u26l")
 offset = Vector2(189.422, -184.272)
 
 [node name="botao1" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 116.0
 offset_top = 103.0
 offset_right = 339.0
@@ -47,6 +48,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 115.0
 offset_top = 227.0
 offset_right = 338.0
@@ -67,6 +69,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 116.0
 offset_top = 442.0
 offset_right = 339.0
@@ -89,6 +92,7 @@ vertical_alignment = 1
 [node name="TextEdit" type="TextEdit" parent="."]
 material = SubResource("CanvasItemMaterial_kxdxw")
 use_parent_material = true
+layout_mode = 0
 offset_left = 74.0
 offset_top = 167.0
 offset_right = 291.0
@@ -96,7 +100,8 @@ offset_bottom = 206.0
 
 [node name="OptionButton" type="OptionButton" parent="TextEdit"]
 layout_mode = 0
-offset_right = 216.0
+offset_left = 2.0
+offset_right = 218.0
 offset_bottom = 41.0
 item_count = 1
 popup/item_0/text = ""

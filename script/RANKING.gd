@@ -17,14 +17,20 @@ func _ready():
 	var players = db.query_result
 	
 	$AudioStreamPlayer2D.play(2)
-	for i in range(0,5):
-		#print(Global.vetorNomes[i])
-		#print(Global.vetorPontos[i])
+	var ranking_nome = " "
+	var ranking_pontos = " "
+	#var pontos
 	
-		#$nome.text = Global.vetorNomes[i]
+	var n =Global.vetorNomes.find("")
+	for i in range(0, n):
+		ranking_nome +=" \n" + Global.vetorNomes[i]
+		ranking_pontos +=" \n" + str(Global.vetorPontos[i])
+		print( "Ranking de nomes: "+ ranking_nome)
+		$nome.text = ranking_nome
+		$pontos.text = ranking_pontos
+		print("Ranking de pontos: "+ ranking_pontos)
 		$nome.modulate = Color(0,0,0,1)
-		var pontos = str(Global.vetorPontos[i])
-		$pontos.text = pontos
+		$pontos.text = ranking_pontos
 		$pontos.modulate = Color(0,0,0,1)
 	pass
 

@@ -1,12 +1,12 @@
 extends Control
 
 var current = " "
-var num2
+#var num2
 func _ready():
 	
 	Global.pontos = Global.pontos + 100
 	current = Global.cidade
-	num2 = Global.pena
+	#num2 = Global.pena
 	
 	if current == "Codó":
 		$Label.text = "PARABÉNS,\nVOCÊ ENCONTROU A PRIMEIRA RELÍQUIA!"
@@ -17,7 +17,7 @@ func _ready():
 		$botao1/Label.text =" SAIR"
 		$Sprite2D.texture = load( "res://tudo/imagens/reliquia/reliquia1.jpeg")
 	else:
-		if num2 == -1:
+		if Global.pena == -1:
 			$Sprite2D.texture = load("res://tudo/imagens/sino_azul/sino0azul.jpg" )
 			$Sprite2D.scale = Vector2(0.5,0.5)
 			$Label.text = "GAME OVER"

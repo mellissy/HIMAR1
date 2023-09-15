@@ -167,8 +167,8 @@ extends Control
 }
 
 var current = " "
-var num1 
-var num2 
+#var num1 
+#var num2 
 var num =0
 func _ready():
 	$botao1/Label.text = "VOLTAR"
@@ -177,12 +177,12 @@ func _ready():
 	$botao2/Label.modulate = Color(0,0,0,1)
 	
 	current = Global.cidade
-	num1 =Global.botao
-	num2 = Global.pena
+	#num1 =Global.botao
+	#num2 = Global.pena
 	
-	$Label.text = (texto[current][num1])
+	$Label.text = (texto[current][Global.botao])
 	$Label.modulate = Color(0,0,0,1)
-	$Sprite2D.texture = load(tela[current][num1])
+	$Sprite2D.texture = load(tela[current][Global.botao])
 	
 	pass
 var soma = 0 

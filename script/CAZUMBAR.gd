@@ -19,8 +19,7 @@ extends Control
 	
 }
 var current
-var num1 
-var num2 
+
 func _ready():
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
@@ -32,9 +31,6 @@ func _ready():
 
 	
 	current = Global.cidade
-	num1 =Global.botao
-	num2 =Global.pena
-	
 	
 	$Label.text = "Estamos em "+ current + "\n Vamos para onde?"
 	$botao2/Label.text = (path[current][0])

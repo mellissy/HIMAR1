@@ -1,7 +1,6 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$botao1/Label.text ="JOGADOR"
 	$botao1/Label.modulate = Color(0,0,0,1)
@@ -11,16 +10,12 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	
 	var nome = " "
-	
-	for i in range(0,Global.i):
-		nome = Global.vetorNomes[i]
-		$TextEdit/OptionButton.add_item(nome)
-		
-	
+	var n =Global.vetorNomes.find("")
+	for i in range(0,n):
+		$TextEdit/OptionButton.add_item(Global.vetorNomes[i])
 	pass # Replace with function body.
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
 	pass
@@ -29,9 +24,18 @@ func _process(delta):
 func _on_botao_3_pressed():
 	get_tree().change_scene_to_file("res://cenas/COMECAR.tscn" )
 	pass # Replace with function body.
-
+var encontrar_jogador
 
 func _on_botao_2_pressed():
-	if $TextEdit.text != "":
+	encontrar_jogador=Global.vetorNomes.find($TextEdit/OptionButton.text)
+	Global.i = encontrar_jogador 
+	Global.nome = Global.vetorNomes[Global.i]
+	Global.pontos = Global.vetorPontos[Global.i]
+	Global.cidade = Global.vetorOndeParou[Global.i]
+	Global.pena = Global.vetVidas[Global.i]
+	
+	
+	
+	if $TextEdit/OptionButton.text != "":
 		get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.

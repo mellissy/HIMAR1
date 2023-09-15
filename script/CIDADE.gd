@@ -86,11 +86,6 @@ var db_name = "res://SQLite/database.db"
 	"Viana":  [Vector2(146,338)],
 }
 
-var current = ""
-var num1 
-var num2 
-var pontos = Global.pontos
-
 func _ready():
 	
 	db = SQLite.new()
@@ -99,9 +94,7 @@ func _ready():
 	if Global.cidade == "Carolina":
 		$fogo.visible = false
 		$fogo2.visible = false
-	current =Global.cidade
-	num1 = Global.botao
-	num2 =Global.pena
+	
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -112,7 +105,7 @@ func _ready():
 	$botao2/Label.modulate = Color(0,0,0,1)
 	$estamos_em.modulate = Color(0,0,0,1)
 	
-	$penas.texture = load(penas["pena"][num2])
+	$penas.texture = load(penas["pena"][Global.pena])
 	
 	$Sprite2D.texture = load(cidades[Global.cidade][0])
 	$estamos_em.text = " Você está em " + Global.cidade +"!"
@@ -125,7 +118,6 @@ func _ready():
 	$dica2.size = size_b[Global.cidade][1]
 	$dica3.size = size_b[Global.cidade][2]
 	$moita.position = moita[Global.cidade][0]
-	pontuacao()
 	
 	pass
 
@@ -151,7 +143,7 @@ func _on_botao1_pressed():
 func _on_dica1_pressed():
 	Global.botao = 0
 	#write(num1 + ":" + current + ";" + num2)
-	if current == "Alcântara" :
+	if Global.cidade == "Alcântara" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -169,7 +161,7 @@ func _on_dica2_pressed():
 func _on_dica3_pressed():
 	Global.botao = 2
 	#write(num1 + ":" + current + ";" + num2)
-	if current == "Alcântara" :
+	if Global.cidade == "Alcântara" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -212,41 +204,3 @@ func _on_timer_timeout():
 	#	cont =0
 	
 	pass # Replace with function body.
-
-func pontuacao():
-	
-	if Global.cidade in ("São Luís"):# or("Grajaú") or ("Imperatriz") or ("Pindaré") or ("Barreirinhas") or ("Codó")or ("Alcântara"):
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Grajaú"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Imperatriz"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Pindaré"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Barreirinhas"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Codó"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Alcântara"): 
-		Global.pontos = pontos + 100
-	elif Global.cidade in    ("Carutapera"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Guimarães"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Buriticupu"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Carolina"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Viana"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Santa Inês"): 
-		Global.pontos = pontos - 50
-	elif Global.cidade in    ("Caxias"): 
-		Global.pontos = pontos - 50
-		
-		
-	#else: 
-	#	Global.pontos = pontos - 110
-	print(Global.pontos)
-	print(Global.cidade+"*******")
-		
