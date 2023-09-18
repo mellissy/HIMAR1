@@ -1,7 +1,7 @@
 extends Node
 
-var cidade = "Alcântara"
-var outra_cidade = ""
+var cidade = "São Luís"
+var outra_cidade = "São Luís"
 var pena = 9
 var botao = 0
 var som = true

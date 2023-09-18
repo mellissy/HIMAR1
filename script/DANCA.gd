@@ -16,6 +16,9 @@ func _ready():
 	pontuacao()
 	Global.pena = Global.pena-1
 	f_caminho()
+	if Global.cidade == "Luís Domingues":
+		Global.pena = 9
+		print("Jogo recarregado!")
 	if Global.pena<0:
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn"  )
 		

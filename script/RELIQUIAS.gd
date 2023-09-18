@@ -13,7 +13,7 @@ func _ready():
 		Global.pena = 9
 		$botao1/Label.text =" CONTINUAR"
 		$Sprite2D.texture = load("res://tudo/imagens/reliquia/reliquia_1.jpeg" )
-	elif current == "Açailândia":
+	elif current == "Açailândia" :
 		$Label.text = "PARABÉNS,\nVOCÊ ENCONTROU TODAS AS RELÍQUIAS!"
 		$botao1/Label.text =" SAIR"
 		$Sprite2D.texture = load( "res://tudo/imagens/reliquia/reliquia1.jpeg")

@@ -208,7 +208,7 @@ func _on_dica1_pressed():
 	Musica.som_botao()
 	Global.botao = 0
 	#write(num1 + ":" + current + ";" + num2)
-	if Global.cidade == "Açailândia" :
+	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -218,7 +218,7 @@ func _on_dica2_pressed():
 	Global.botao = 1
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
-	if Global.cidade == "Açailândia" or Global.cidade == "Alcântara":
+	if( Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" ) or Global.cidade == "Alcântara":
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -228,7 +228,7 @@ func _on_dica3_pressed():
 	Global.botao = 2
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
-	if Global.cidade == "Açailândia" :
+	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
