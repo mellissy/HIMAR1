@@ -17,16 +17,16 @@ anchors_preset = 0
 script = ExtResource("5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(85, 416)
+position = Vector2(80, 414)
 scale = Vector2(0.5, 0.52)
 texture = ExtResource("6")
 offset = Vector2(189.422, -184.272)
 
 [node name="botao1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 116.0
+offset_left = 100.0
 offset_top = 103.0
-offset_right = 339.0
+offset_right = 323.0
 offset_bottom = 181.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
@@ -45,9 +45,9 @@ vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 115.0
+offset_left = 100.0
 offset_top = 227.0
-offset_right = 338.0
+offset_right = 323.0
 offset_bottom = 305.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
@@ -66,9 +66,9 @@ vertical_alignment = 1
 
 [node name="botao3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 116.0
+offset_left = 100.0
 offset_top = 442.0
-offset_right = 339.0
+offset_right = 323.0
 offset_bottom = 520.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
@@ -89,9 +89,9 @@ vertical_alignment = 1
 material = SubResource("2")
 use_parent_material = true
 layout_mode = 0
-offset_left = 74.0
+offset_left = 60.0
 offset_top = 167.0
-offset_right = 291.0
+offset_right = 277.0
 offset_bottom = 206.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

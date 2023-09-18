@@ -2,6 +2,10 @@ extends Control
 
 
 func _ready():
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
 	$botao1/Label.text ="JOGADOR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$botao2/Label.text =" COMEÇAR"
@@ -22,11 +26,13 @@ func _process(delta):
 
 
 func _on_botao_3_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/COMECAR.tscn" )
 	pass # Replace with function body.
 var encontrar_jogador
 
 func _on_botao_2_pressed():
+	
 	encontrar_jogador=Global.vetorNomes.find($TextEdit/OptionButton.text)
 	Global.i = encontrar_jogador 
 	Global.nome = Global.vetorNomes[Global.i]
@@ -37,5 +43,6 @@ func _on_botao_2_pressed():
 	
 	
 	if $TextEdit/OptionButton.text != "":
+		Musica.som_botao()
 		get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.

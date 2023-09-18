@@ -16,31 +16,33 @@ func _ready():
 	$botao4/Label.text= "INSTRUÇÕES"
 	$botao4/Label.modulate = Color(0,0,0,1)
 	
-	print("vetores")
-	print(str(Global.vetorPontos))
-	print(Global.vetorNomes)
-	print(Global.vetorOndeParou)
-	print(Global.vetVidas)
 	
 	pass
 
 func _on_botao1_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/COMECAR.tscn"  )
+	
 	pass # Replace with function body.
 #c
 
 func _on_botao2_pressed():
+	Musica.som_botao()
+	
 	get_tree().change_scene_to_file( "res://cenas/OPCOES.tscn" )
 	
 	pass # Replace with function body.
 
 
 func _on_botao3_pressed():
+	Musica.som_botao()
+	
 	get_tree().change_scene_to_file("res://cenas/RANKING.tscn"  )
 	pass # Replace with function body.
 
 
 func _on_botao4_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/INSTRUCOES.tscn"  )
 	pass # Replace with function body.
 

@@ -17,16 +17,19 @@ func _ready():
 
 
 func _on_botao1_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/NOVO_JOGO.tscn"  )
 	pass # Replace with function body.
 
 
 func _on_botao3_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
 	pass # Replace with function body.
 
 
 func _on_botao_2_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/recarregar_jogo.tscn"  )
 	
 	pass # Replace with function body.

@@ -57,11 +57,16 @@ func _insertDB():
 	return true
 
 func _on_botao3_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/COMECAR.tscn" )
 	pass # Replace with function body.
 
 
 func _on_botao2_pressed():
+	Musica.som_botao()
+	for i in 6:
+		Global.caminho[i]= 0
+	#print(Global.caminho)
 	#Global.vetorNomes[Global.i] = $TextEdit.text
 	Global.nome = $TextEdit.text
 	if _insertDB():

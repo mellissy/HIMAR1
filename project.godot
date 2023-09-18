@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://script/GLOBAL.gd"
+Musica="*res://cenas/musica.tscn"
 
 [display]
 

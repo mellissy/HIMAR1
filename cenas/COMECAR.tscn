@@ -21,10 +21,10 @@ offset = Vector2(163.094, 219.639)
 
 [node name="botao1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 95.0
+offset_left = 100.0
 offset_top = 155.0
-offset_right = 270.0
-offset_bottom = 205.0
+offset_right = 323.0
+offset_bottom = 233.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
 texture_pressed = ExtResource("3")
@@ -43,10 +43,10 @@ vertical_alignment = 1
 
 [node name="botao2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 94.0
+offset_left = 100.0
 offset_top = 237.0
-offset_right = 269.0
-offset_bottom = 287.0
+offset_right = 323.0
+offset_bottom = 315.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
 texture_pressed = ExtResource("3")
@@ -63,10 +63,10 @@ theme_override_font_sizes/font_size = 23
 
 [node name="botao3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 96.0
+offset_left = 100.0
 offset_top = 320.0
-offset_right = 271.0
-offset_bottom = 370.0
+offset_right = 323.0
+offset_bottom = 398.0
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("2")
 texture_pressed = ExtResource("3")

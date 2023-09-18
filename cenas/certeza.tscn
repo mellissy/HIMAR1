@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdgm375wckdhg"]
+[gd_scene load_steps=8 format=3 uid="uid://cdgm375wckdhg"]
 
 [ext_resource type="Script" path="res://script/Control.gd" id="1_ck1sr"]
 [ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="2_ukgb1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="4_uurc0"]
 [ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="5_4nvh3"]
 [ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="6_adav3"]
+[ext_resource type="AudioStream" uid="uid://bac64lm3je327" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_oi1mr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -98,6 +99,9 @@ theme_override_fonts/font = ExtResource("3_1hhgv")
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_oi1mr")
 
 [connection signal="pressed" from="cidade_antiga" to="." method="_on_cidade_antiga_pressed"]
 [connection signal="pressed" from="cidade_atual" to="." method="_on_cidade_atual_pressed"]

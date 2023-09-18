@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs60ehaxylsw"]
+[gd_scene load_steps=8 format=3 uid="uid://bs60ehaxylsw"]
 
-[ext_resource type="Texture2D" uid="uid://dha3336i7280o" path="res://tudo/imagens/personagens/alcantara/Joao.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://bmhq3oqo07e30" path="res://tudo/imagens/personagens/Zezinho.jpg" id="2_42m5y"]
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
 [ext_resource type="Script" path="res://script/DICA.gd" id="6"]
 [ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
+[ext_resource type="Texture2D" uid="uid://bkirorrdougyn" path="res://tudo/Botoes/caixaTexto.png" id="7_l01bs"]
 
 [node name="DICA" type="Control"]
 layout_mode = 3
@@ -15,7 +16,7 @@ script = ExtResource("6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(172, 52)
 scale = Vector2(0.5, 0.52)
-texture = ExtResource("1")
+texture = ExtResource("2_42m5y")
 offset = Vector2(0, 520.197)
 
 [node name="botao1" type="TextureButton" parent="."]
@@ -62,13 +63,19 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(164.875, 300)
+scale = Vector2(0.513542, 0.546875)
+texture = ExtResource("7_l01bs")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 454.0
-offset_right = 284.0
-offset_bottom = 613.0
+offset_left = 62.0
+offset_top = 448.0
+offset_right = 283.0
+offset_bottom = 607.0
 theme_override_font_sizes/font_size = 10
+text = "bgfvgsvsvfvsyvyrs"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

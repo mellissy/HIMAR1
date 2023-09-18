@@ -16,11 +16,26 @@ func _ready():
 
 
 func _on_botao1_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
 	pass # Replace with function body.
 
 
 func _on_caixa_musica_pressed():
+	
+	
+	
+	"""if Global.som == false:
+		print("dentro de falso")
+		print(Global.som )
+		Global.som = true
+	elif Global.som == true:
+		print(Global.som )
+		Global.som =false
+		print("dentro de verdadeiro")"""
+		
+	
+	
 	if Global.cont %2 !=0:
 		Global.cont = Global.cont +1
 		Global.som = false
@@ -29,4 +44,15 @@ func _on_caixa_musica_pressed():
 		Global.cont = Global.cont +1
 		Global.som = true
 		$AudioStreamPlayer2D.play()
+	pass # Replace with function body
+
+
+func _on_caixa_sons_pressed():
+	
+	if Global.button == false:
+		Global.button = true
+	elif Global.button == true:
+		Global.button =false
+		
+	
 	pass # Replace with function body.

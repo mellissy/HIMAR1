@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc700elry0kwk"]
+
+[ext_resource type="Script" path="res://script/musica.gd" id="1_pel58"]
+[ext_resource type="AudioStream" uid="uid://du84trws53jbv" path="res://tudo/sons/botao.mp3" id="2_yff4s"]
+
+[node name="musica" type="Node2D"]
+script = ExtResource("1_pel58")
+
+[node name="som" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_yff4s")
+volume_db = 2.942
+pitch_scale = 1.27

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://130fu360d8w7"]
+
+[ext_resource type="Texture2D" uid="uid://bkirorrdougyn" path="res://tudo/Botoes/caixaTexto.png" id="1_t0nov"]
+
+[node name="caixa_de_texto" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_t0nov")

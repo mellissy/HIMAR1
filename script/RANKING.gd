@@ -6,6 +6,12 @@ var db_name = "res://SQLite/database.db"
 
 func _ready():
 	
+	if Global.som :
+		$AudioStreamPlayer2D.play(2)
+	if Global.som == false:
+		$AudioStreamPlayer2D.stop()
+		
+	
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
@@ -16,7 +22,6 @@ func _ready():
 	
 	var players = db.query_result
 	
-	$AudioStreamPlayer2D.play(2)
 	var ranking_nome = " "
 	var ranking_pontos = " "
 	#var pontos
@@ -25,10 +30,10 @@ func _ready():
 	for i in range(0, n):
 		ranking_nome +=" \n" + Global.vetorNomes[i]
 		ranking_pontos +=" \n" + str(Global.vetorPontos[i])
-		print( "Ranking de nomes: "+ ranking_nome)
+		
 		$nome.text = ranking_nome
 		$pontos.text = ranking_pontos
-		print("Ranking de pontos: "+ ranking_pontos)
+		
 		$nome.modulate = Color(0,0,0,1)
 		$pontos.text = ranking_pontos
 		$pontos.modulate = Color(0,0,0,1)
@@ -36,5 +41,6 @@ func _ready():
 
 
 func _on_voltar_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
 	pass # Replace with function body.

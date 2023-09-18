@@ -2,25 +2,23 @@ extends Control
 
 func _ready():
 	Global.cidade = "São Luís"
+	Global.caminho[0]=1
 	Global.botao = 0
 	Global.pena = 9
 	Global.pontos = 0
 	
-	
-	#$AudioStreamPlayer2D.play()
 	$botao1/Label.text = "PULAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	
 	var file = FileAccess.open("res://citty.txt", FileAccess.READ)
 	var info = file.get_as_text().split(":")
 	var leve = info[1].split(";")
-	leve[1] = "9"
-	write(info[0] + ":" + "São Luís" + ";" + leve[1])
 	
 	pass
 
 
 func _on_botao1_pressed():
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn"  )
 	pass # Replace with function body.
 

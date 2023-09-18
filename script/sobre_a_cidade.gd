@@ -56,10 +56,51 @@ extends Control
 	
 	],
 	"Viana": [
+		"Você sabia que Viana é a quarta cidade mais antiga do maranhão,\n tendo sua povoação iniciada em 1709 pelos missionários da Companhia de Jesus?\n Essa povoação se iniciou no território que, nessa época,\n se chamava aldeia Guajajara de Maracu.",
+	
+	],
+	"Luís Domingues": [
+		"!", 
+	
+	],
+	"Godofredo Viana": [ 
+	"!"
+
+	],
+	"Açailândia": [
+		"!"
+	
+	],
+	"Itapecuru": [
+		"!"
+	],
+	"São José de Ribamar": [
+		"!",
+	],
+	"Pinheiro": [
+		"!", 
+	],
+	"Balsas": [ 
+	"!"
+	
+	],
+	"Timon": [
+	
+	"!",
+	
+	],
+	"Paço do Lumiar": [
+	"Sabia que Santa Inês, além de ter sido fundada em 1887 por senhores de escravos,\n era o principal povoado do município de Pindaré-Mirim?\n Foi desmembrado de seu vizinho apenas em 1967. Em seu início já foi chamada de Aldeia dos Pretos,\n Ponta da Linha, Conceição. Sendo, finalmente denominada de Santa Inês,\n em razão do voto de uma senhora pelo sucesso que obteve em um parto de risco.",
+	
+	],
+	"Bacabal": [
+		"Você sabia que Viana é a quarta cidade mais antiga do maranhão,\n tendo sua povoação iniciada em 1709 pelos missionários da Companhia de Jesus?\n Essa povoação se iniciou no território que, nessa época,\n se chamava aldeia Guajajara de Maracu.",
+	
+	],
+	"Barra do Corda": [
 		"Você sabia que Viana é a quarta cidade masi antiga do maranhão,\n tendo sua povoação iniciada em 1709 pelos missionários da Companhia de Jesus?\n Essa povoação se iniciou no território que, nessa época,\n se chamava aldeia Guajajara de Maracu.",
 	
 	],
-	
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -82,6 +123,8 @@ func _process(delta):
 
 
 func _on_botao_1_pressed():
+	
+	Musica.som_botao()
 	get_tree().change_scene_to_file("res://cenas/CIDADE.tscn" )
 	pass # Replace with function body.
 
