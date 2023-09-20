@@ -236,9 +236,10 @@ extends Control
 		"res://tudo/imagens/personagens/personagens_novos/b.png",
 		"res://tudo/imagens/personagens/personagens_novos/e1.jpg"
 	],
-	"Balsas": ["res://tudo/imagens/personagens/personagens_novos/l.png",
+	"Balsas": [
+		"res://tudo/imagens/personagens/personagens_novos/l.png",
 		"res://tudo/imagens/personagens/personagens_novos/h.png",
-	"res://tudo/imagens/personagens/personagens_novos/i.png"
+		"res://tudo/imagens/personagens/jorge.jpg"
 	],
 	"Pinheiro": [ 
 	"res://tudo/imagens/personagens/personagens_novos/e.png",

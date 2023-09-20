@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	Global.cidade = "Balsas"
+	Global.cidade = "São Luís"
 	Global.caminho[0]=1
 	Global.botao = 0
 	Global.pena = 9

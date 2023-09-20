@@ -30,10 +30,10 @@ var db_name = "res://SQLite/database.db"
 	"Bacabal": [ "res://tudo/imagens/mapa/cenario_novo/bacabal.jpg" ],#f
 	"Paço do Lumiar": ["res://tudo/imagens/mapa/cenario_novo/Paco_do_Lumiar.jpg" ], #f
 	"Timon": [ "res://tudo/imagens/mapa/cenario_novo/Timon.jpg"],#f
-	"Balsas": ["res://tudo/imagens/mapa/lixo_mapa/balsas.jpg" ],
+	"Balsas": [ "res://tudo/imagens/mapa/cenario_novo/balsas.jpg"],
 	"Pinheiro": ["res://tudo/imagens/mapa/cenario_novo/pinheiro.jpg" ],#f
 	"São José de Ribamar": [ "res://tudo/imagens/mapa/cenario_novo/Sao_Jose_do_ribamar.jpg"],#f
-	"Itapecuru": ["res://tudo/imagens/mapa/lixo_mapa/itapecuru.jpg" ],
+	"Itapecuru": [ "res://tudo/imagens/mapa/cenario_novo/itapecuru.jpg" ],
 	"Açailândia": ["res://tudo/imagens/mapa/cenario_novo/acailandia.jpg"  ],#f
 	"Godofredo Viana": ["res://tudo/imagens/mapa/cenario_novo/Godofredo_Viana.jpg" ],#f
 	"Luís Domingues": [ "res://tudo/imagens/mapa/cenario_novo/Luis_Domingues.jpg" ]#f
@@ -74,10 +74,10 @@ var db_name = "res://SQLite/database.db"
 	"Bacabal": [Vector2(90,300),Vector2(123,233),Vector2(245,225)  ],
 	"Paço do Lumiar": [Vector2(23,250),Vector2(98,259),Vector2(216,287)  ],
 	"Timon":[Vector2(87,246),Vector2(164,298),Vector2(222,338)  ],
-	"Balsas":[Vector2(110,160),Vector2(125,250),Vector2(230,310)  ],
+	"Balsas":[Vector2(185,260),Vector2(120,315),Vector2(48,463)  ],
 	"Pinheiro":[Vector2(228,265),Vector2(157,312),Vector2(32,390)  ],
 	"São José de Ribamar": [Vector2(285,265),Vector2(82,330),Vector2(100,455)  ],
-	"Itapecuru": [Vector2(110,160),Vector2(125,250),Vector2(230,310)  ],
+	"Itapecuru": [Vector2(170,273),Vector2(238,360),Vector2(90,400)  ],
 	"Açailândia": [Vector2(250,287),Vector2(103,385),Vector2(235,395)  ],
 	"Godofredo Viana": [Vector2(182,285),Vector2(132,403),Vector2(77,485)  ],
 	"Luís Domingues": [Vector2(182,280),Vector2(136,352),Vector2(75,445)  ],
@@ -103,10 +103,10 @@ var db_name = "res://SQLite/database.db"
 	"Bacabal": [ Vector2(343,70),Vector2(350,70),Vector2(163,105) ],
 	"Paço do Lumiar": [ Vector2(127,152),Vector2(313,77),Vector2(297,62) ],
 	"Timon": [ Vector2(184,85),Vector2(235,33),Vector2(180,45) ],
-	"Balsas": [Vector2(100,60),Vector2(80,70),Vector2(65,60)  ],
+	"Balsas": [Vector2(373,90),Vector2(130,85),Vector2(337,55)  ],
 	"Pinheiro": [Vector2(330,58),Vector2(190,64),Vector2(260,40)  ],
 	"São José de Ribamar": [ Vector2(182,65),Vector2(307,38),Vector2(303,40) ],
-	"Itapecuru": [ Vector2(160,60),Vector2(60,70),Vector2(110,95) ],
+	"Itapecuru": [ Vector2(330,47),Vector2(180,85),Vector2(275,50) ],
 	"Açailândia": [ Vector2(230,50),Vector2(343,57),Vector2(297,60) ],
 	"Godofredo Viana": [ Vector2(177,40),Vector2(277,40),Vector2(230,50) ],
 	"Luís Domingues": [ Vector2(247,50),Vector2(253,60),Vector2(270,55) ],
@@ -133,10 +133,10 @@ var db_name = "res://SQLite/database.db"
 	"Bacabal":  [Vector2(184,315)],
 	"Paço do Lumiar":  [Vector2(183,277)],
 	"Timon":  [Vector2(138,264)],
-	"Balsas": [Vector2(123,280)],
+	"Balsas": [Vector2(234,378)],
 	"Pinheiro": [Vector2(115,328)],
 	"São José de Ribamar":  [Vector2(217,285)],
-	"Itapecuru": [Vector2(160,430)],
+	"Itapecuru": [Vector2(192,395)],
 	"Açailândia":  [Vector2(206,406)],
 	"Godofredo Viana":  [Vector2(145,448)],
 	"Luís Domingues":  [Vector2(156,430)],
