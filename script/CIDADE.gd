@@ -60,13 +60,13 @@ var db_name = "res://SQLite/database.db"
 	"Imperatriz": [Vector2(60,220),Vector2(170,130),Vector2(210,300)  ],
 	"Alcântara": [Vector2(215,160),Vector2(80,225),Vector2(40,375) ],
 	"Pindaré": [ Vector2(207,190),Vector2(72,217),Vector2(50,320)],
-	"Carutapera": [Vector2(123,225),Vector2(127,316),Vector2(101,455) ],
+	"Carutapera": [Vector2(108,215),Vector2(120,308),Vector2(92,455) ],#
 	"Guimarães": [ Vector2(197,150),Vector2(90,208),Vector2(154,285)],
-	"Buriticupu": [ Vector2(105,165),Vector2(163,325),Vector2(95,450)],
+	"Buriticupu": [ Vector2(112,208),Vector2(160,355),Vector2(95,466)],
 	"Barreirinhas": [  Vector2(155,146),Vector2(235,250),Vector2(50,390) ],
 	"Caxias": [ Vector2(175,208),Vector2(32,295),Vector2(214,293) ],
 	"Codó": [ Vector2(150,230),Vector2(60,303),Vector2(115,400) ],
-	"Carolina": [Vector2(30,185),Vector2(165,222),Vector2(103,395)  ],
+	"Carolina": [Vector2(30,185),Vector2(161,222),Vector2(103,404)  ],#
 	"Santa Inês": [Vector2(235,140),Vector2(195,310),Vector2(66,360)  ],
 	"Viana": [ Vector2(35,278),Vector2(161,395),Vector2(232,328) ],
 	#########################################
@@ -89,13 +89,13 @@ var db_name = "res://SQLite/database.db"
 	"Imperatriz": [ Vector2(390,90),Vector2(495,85),Vector2(355,100) ],
 	"Alcântara": [Vector2(177,55),Vector2(477,52),Vector2(227,67) ],
 	"Pindaré": [Vector2(230,40),Vector2(207,60),Vector2(367,45) ],
-	"Carutapera": [Vector2(233,50),Vector2(223,80),Vector2(233,62) ],
+	"Carutapera": [Vector2(370,55),Vector2(275,95),Vector2(313,60) ],
 	"Guimarães": [Vector2(163,40),Vector2(227,45),Vector2(107,67) ],
 	"Buriticupu": [Vector2(277,44),Vector2(253,60),Vector2(203,58)  ],
 	"Barreirinhas": [ Vector2(245,100),Vector2(250,100),Vector2(343,67) ],
 	"Caxias": [Vector2(353,50),Vector2(307,75),Vector2(247,67)  ],
 	"Codó": [ Vector2(270,100),Vector2(260,63),Vector2(233,62) ],
-	"Carolina": [ Vector2(233,50),Vector2(163,140),Vector2(203,60) ],
+	"Carolina": [ Vector2(280,80),Vector2(163,140),Vector2(203,60) ],
 	"Santa Inês": [ Vector2(267,45),Vector2(143,70),Vector2(230,67) ],
 	"Viana": [ Vector2(227,61),Vector2(247,60),Vector2(223,62) ],
 	################################################
@@ -113,35 +113,41 @@ var db_name = "res://SQLite/database.db"
 	
 	}
 @onready var moita = {
-	"São Luís":  [Vector2(190,290)],
-	"Grajaú":  [Vector2(160,360)],
-	"Imperatriz":  [Vector2(230,270)],
-	"Alcântara":  [Vector2(75,330)],
-	"Pindaré": [Vector2(123,280)],
-	"Carutapera": [Vector2(225,250)],
-	"Guimarães":  [Vector2(100,300)],
-	"Buriticupu": [Vector2(160,430)],
-	"Barreirinhas":  [Vector2(200,408)],
-	"Caxias":  [Vector2(145,300)],
-	"Codó":  [Vector2(180,350)],
-	"Carolina":  [Vector2(100,290)],
-	"Santa Inês":  [Vector2(230,210)],
-	"Viana":  [Vector2(146,338)],
+	
+	"São Luís":  [Vector2(190,372)],
+	"Grajaú":  [Vector2(200,440)],
+	"Imperatriz":  [Vector2(163,266)],
+	"Alcântara":  [Vector2(117,350)],
+	"Pindaré": [Vector2(156,266)],
+	"Carutapera": [Vector2(220,250)],
+	"Guimarães":  [Vector2(93,294)],
+	"Buriticupu": [Vector2(185,447)], #
+	"Barreirinhas":  [Vector2(170,380)],
+	"Caxias":  [Vector2(120,304)],
+	"Codó":  [Vector2(54,374)],#
+	"Carolina":  [Vector2(113,307)], #
+	"Santa Inês":  [Vector2(144,347)],
+	"Viana":  [Vector2(187,303)],
 	##############################
-	"Barra do Corda":  [Vector2(110,345)],
-	"Bacabal":  [Vector2(245,360)],
-	"Paço do Lumiar":  [Vector2(120,360)],
-	"Timon":  [Vector2(110,345)],
+	"Barra do Corda":  [Vector2(142,266)],
+	"Bacabal":  [Vector2(184,315)],
+	"Paço do Lumiar":  [Vector2(183,277)],
+	"Timon":  [Vector2(138,264)],
 	"Balsas": [Vector2(123,280)],
-	"Pinheiro": [Vector2(261,345)],
-	"São José de Ribamar":  [Vector2(185,305)],
+	"Pinheiro": [Vector2(115,328)],
+	"São José de Ribamar":  [Vector2(217,285)],
 	"Itapecuru": [Vector2(160,430)],
-	"Açailândia":  [Vector2(180,450)],
-	"Godofredo Viana":  [Vector2(206,355)],
-	"Luís Domingues":  [Vector2(217,375)],
+	"Açailândia":  [Vector2(206,406)],
+	"Godofredo Viana":  [Vector2(145,448)],
+	"Luís Domingues":  [Vector2(156,430)],
 }
 
 func _ready():
+	print("vidas: "+str(Global.vetVidas))
+	print("vidas "+ str(Global.pena))
+	if Global.pena <= -1:
+		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
+		
 	#var p = str(Global.caminho)
 	#print("caminho da cidade é "+ p)
 	db = SQLite.new()
@@ -209,7 +215,7 @@ func _on_dica1_pressed():
 	Global.botao = 0
 	#write(num1 + ":" + current + ";" + num2)
 	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
-		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
+		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
@@ -218,8 +224,8 @@ func _on_dica2_pressed():
 	Global.botao = 1
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
-	if( Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" ) or Global.cidade == "Alcântara":
-		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
+	if( Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" ) or ( Global.cidade == "Alcântara" and Global.outra_cidade == "Barreirinhas" ) :
+		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
@@ -229,7 +235,7 @@ func _on_dica3_pressed():
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
 	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
-		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn" )
+		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
@@ -250,9 +256,11 @@ var move = true
 var cont
 func _on_timer_timeout():
 	if num%2==0:
-		$moita.flip_h = true
+		$moita.texture_normal = load("res://tudo/imagens/outros/Luminaria com luz.png" )
+		#$moita.flip_h = true
 	else: 
-		$moita.flip_h = false
+		$moita.texture_normal = load( "res://tudo/imagens/outros/luminária que está valendo .png")
+		#$moita.flip_h = false
 	num= num+1
 	#cont = cont +1
 	if move == true:

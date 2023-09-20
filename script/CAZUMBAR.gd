@@ -2,11 +2,11 @@ extends Control
 
 
 @onready var path = {
-	"São Luís": ["Imperatriz", "Timon", "Carutapera"],
-	"Imperatriz": ["Itapecuru", "Grajaú", "Buriticupu"],
+	"São Luís": ["Imperatriz", "Barreirinhas", "Codó"],
+	"Imperatriz": ["Buriticupu", "Grajaú", "Buriticupu"],
 	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
 	"Carutapera": ["São Luís", "Guimarães", "Buriticupu"],
-	"Pindaré": ["Carolina", "Açailândia", "Codó"],
+	"Pindaré": ["Carolina", "Viana", "Codó"],
 	"Alcântara": ["Santa Inês", "Godofredo Viana", "Codó"],
 	"Guimarães": ["Caxias", "Buriticupu", "São Luís"],
 	"Buriticupu": ["Viana", "Caxias", "Grajaú"],
@@ -26,7 +26,7 @@ extends Control
 	"Barra do Corda": ["Luís Domingues", "Godofredo Viana", "São José de Ribamar"],
 	"Bacabal": ["Açailândia", "Itapecuru", "Pinheiro"],
 	"Paço do Lumiar": ["Pinheiro", "Balsas", "Timon"],
-	"Timon": ["Bacabal", "Luís Domingues", "São José de Ribamar"],
+	"Timon": ["Bacabal", "Barra do Corda", "São José de Ribamar"],
 	"Balsas": ["Bacabal", "Luís Domingues", "Itapecuru"],
 	"Pinheiro": ["Timon", "Itapecuru", "Balsas"],
 	"São José de Ribamar": ["Açailândia", "Pinheiro", "Luís Domingues"],
@@ -145,18 +145,20 @@ func caminho_certo():
 		Global.caminho[9]=1
 	elif Global.cidade== "Timon" and Global.outra_cidade == "Pinheiro":
 		Global.caminho[10]=1
-	elif Global.cidade== "São José de Ribamar" and Global.outra_cidade == "Barra do Corda":
+	elif Global.cidade== "Barra do Corda" and Global.outra_cidade == "Timon":
 		Global.caminho[11]=1
-	elif Global.cidade== "Luís Domingues" and Global.outra_cidade == "São José de Ribamar":
+	elif Global.cidade== "São José de Ribamar" and Global.outra_cidade == "Barra do Corda":
 		Global.caminho[12]=1
-	elif Global.cidade== "Paço do Lumiar" and Global.outra_cidade == "Luís Domingues":
+	elif Global.cidade== "Luís Domingues" and Global.outra_cidade == "São José de Ribamar":
 		Global.caminho[13]=1
-	elif Global.cidade== "Balsas" and Global.outra_cidade == "Paço do Lumiar":
+	elif Global.cidade== "Paço do Lumiar" and Global.outra_cidade == "Luís Domingues":
 		Global.caminho[14]=1
-	elif Global.cidade== "Itapecuru" and Global.outra_cidade == "Balsas":
+	elif Global.cidade== "Balsas" and Global.outra_cidade == "Paço do Lumiar":
 		Global.caminho[15]=1
-	elif Global.cidade== "Açailândia" and Global.outra_cidade == "Itapecuru":
+	elif Global.cidade== "Itapecuru" and Global.outra_cidade == "Balsas":
 		Global.caminho[16]=1
+	elif Global.cidade== "Açailândia" and Global.outra_cidade == "Itapecuru":
+		Global.caminho[17]=1
 	
 	print ("depois  da funcao " + str(Global.caminho))
 	#print(Global.caminho)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://brd5s0a2xk7ya"]
 
-[ext_resource type="Texture2D" uid="uid://c4k5jy4vdyx4" path="res://tudo/imagens/mapa/Viana.jpg" id="2_vpmiv"]
+[ext_resource type="Texture2D" uid="uid://cbog7vbs8llc6" path="res://tudo/imagens/mapa/cenario_novo/Timon.jpg" id="2_2xpn6"]
 [ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://q20r1arp4l5j" path="res://tudo/imagens/sino_azul/sino6azull.png" id="7"]
 [ext_resource type="FontFile" uid="uid://qbn1wgjqfo6f" path="res://tudo/fonts/vademecum.ttf" id="7_ijpkw"]
 [ext_resource type="AudioStream" uid="uid://cg032tfgleych" path="res://tudo/sons/MusicaDuranteAsTelas.mp3" id="9_3ix77"]
-[ext_resource type="Texture2D" uid="uid://8hhovmo0xuub" path="res://tudo/imagens/outros/moita_png.png" id="10_0y7vt"]
+[ext_resource type="Texture2D" uid="uid://dgrvrnajx42yb" path="res://tudo/imagens/outros/luminária que está valendo .png" id="10_3qotv"]
 [ext_resource type="Script" path="res://script/moita.gd" id="11_jysij"]
 [ext_resource type="Texture2D" uid="uid://dx22aogut5ack" path="res://tudo/imagens/outros/fogo.png" id="12_cg62u"]
 
@@ -21,7 +21,7 @@ script = ExtResource("6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(223, 53)
 scale = Vector2(0.5, 0.52)
-texture = ExtResource("2_vpmiv")
+texture = ExtResource("2_2xpn6")
 offset = Vector2(-88.4916, 521.521)
 
 [node name="botao1" type="TextureButton" parent="."]
@@ -82,27 +82,27 @@ clip_text = true
 
 [node name="dica1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 278.0
-offset_right = 261.0
-offset_bottom = 339.0
+offset_left = 108.0
+offset_top = 216.0
+offset_right = 481.0
+offset_bottom = 273.0
 scale = Vector2(0.3, 1)
 ignore_texture_size = true
 
 [node name="dica2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 161.0
-offset_top = 395.0
-offset_right = 408.0
-offset_bottom = 455.0
+offset_left = 119.0
+offset_top = 308.0
+offset_right = 393.0
+offset_bottom = 401.0
 scale = Vector2(0.3, 1)
 
 [node name="dica3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 232.0
-offset_top = 328.0
-offset_right = 455.0
-offset_bottom = 391.0
+offset_left = 92.0
+offset_top = 455.0
+offset_right = 405.0
+offset_bottom = 512.0
 scale = Vector2(0.3, 1)
 
 [node name="penas" type="Sprite2D" parent="."]
@@ -115,12 +115,13 @@ stream = ExtResource("9_3ix77")
 
 [node name="moita" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 289.0
-offset_top = 86.0
-offset_right = 1363.0
-offset_bottom = 1052.0
+offset_left = 138.0
+offset_top = 264.0
+offset_right = 813.0
+offset_bottom = 2184.0
 scale = Vector2(0.04, 0.04)
-texture_normal = ExtResource("10_0y7vt")
+texture_normal = ExtResource("10_3qotv")
+ignore_texture_size = true
 script = ExtResource("11_jysij")
 
 [node name="Timer" type="Timer" parent="."]

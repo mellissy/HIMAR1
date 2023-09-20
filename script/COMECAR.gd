@@ -2,7 +2,8 @@ extends Control
 
 
 func _ready():
-	
+	print("vidas: "+str(Global.vetVidas))
+	print("vidas "+ str(Global.pena))
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:

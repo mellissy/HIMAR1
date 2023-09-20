@@ -23,10 +23,10 @@ scale = Vector2(0.359343, 0.471959)
 texture = ExtResource("2_3ld32")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -445.257
-offset_top = -578.44
-offset_right = 208.743
-offset_bottom = -245.44
+offset_left = -401.0
+offset_top = -600.0
+offset_right = 351.0
+offset_bottom = -207.0
 theme_override_font_sizes/font_size = 25
 text = "uuuuuuuuuuuuuuuu"
 horizontal_alignment = 1

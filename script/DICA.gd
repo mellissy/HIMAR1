@@ -23,11 +23,11 @@ extends Control
 	"São Luís": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
-		"O quê? suspeito? Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
+		"O quê? suspeito? Suspeito de quê? Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
 	],
 	"Imperatriz": [
 		
-		" Ho meu filho/a! \n Passou um suspeito por aqui sim!\n Ele falava alguma coisa sem sentido. Queria saber sobre um atentado contra um tal de Leão Leda.     ",
+		" Ho meu filho/a!  Passou um suspeito por aqui sim! Ele falava alguma coisa sem sentido. Queria saber sobre um atentado contra um tal de Leão Leda.     ",
 		"'Mirmã' não sei nada não! Passou um suspeito por aqui, mas não dei muita atenção pra ele. Só lembro que falou alguma coisa sobre a Guerra da Leda no sertão do maranhão. Que parece, aconteceu no final do século XIX e no inicio do século XX."  ,
 		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
 	],
@@ -44,9 +44,9 @@ extends Control
 
 	],
 	"Alcântara": [ 
-	"!!!!  ",
-	"!!!" ,
-	"!!!"
+	"Escutei comentários sobre uma cidade que, recentemente, esteve no centro das atenções devido a atividades suspeitas em uma propriedade rural. Parece que houve uma operação conjunta da Polícia Civil e Militar, que resultou na descoberta de várias infrações, incluindo extração ilegal de ouro e até casos de trabalho infantil." ,
+	"Ei, você sabia que uma cidade maranhense foi o foco de uma operação chamada Febre do Ouro? As autoridades estavam investigando uma fazenda pertencente a uma figura importante na cidade, onde foram encontradas práticas criminosas, como tráfico e extração ilegal de recursos naturais. A cidade em questão certamente viu um grande impacto nesse período turbulento.",
+	"Amigo, eu escutei um suspeito falando algo sobre uma cidade que tem uma comunidade chamada de Aurizona, por conta do ouro. Ele tava falando que de uma barragem de rejeitos que transbordou em 2021 e gerou uma enxurrada que atingiu a região gerando sérios problemas ambientais."
 	],
 	"Barreirinhas": [ 
 	"Uma pessoa muito estranho passou por aqui agorinha, ele disse que estava indo participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
@@ -60,10 +60,14 @@ extends Control
 	],
 	####################################################
 	"Barra do Corda": [ 
-		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
-		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
-		"O quê? suspeito? Suspeito de quê?\n Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
-	],
+		
+	"Um suspeito passou por aqui e perguntou sobre o município que é considerado o 'Berço da Fé'. Ele disse que lá ocorre uma das maiores festas religiosas do estado, atraindo milhares de fiéis de todo o Brasil. Parece que a cidade também possui uma bela praia que é muito frequentada pelos moradores e turistas.",
+	"Um suspeito passou por aqui e disse que estava rumo a uma cidade que abriga uma importante igreja, considerada o maior centro de devoção. Essa igreja atrai peregrinos e devotos de diferentes lugares, especialmente durante as festividades religiosas.",
+	"Um sujeito suspeito comentou sobre uma cidade com uma história muito rica e que, durante o século XX, passou por um processo de urbanização significativo e um aumento na população devido à sua proximidade com a capital, São Luís. Muito provavelmente ele estava indo em direção a este lugar."
+
+
+		
+		],
 	"Bacabal": [
 		"Um rapaz passou por aqui falando sobre uma cidade muito antiga aqui do Maranhão, que foi fundada em meados do século XIX, ainda no período colonial e que se desenvolveu como um importante centro econômico e cultural. Além disso, segundo ele, a cidade era inicialmente uma vila de pescadores, que se estabeleceram às margens do rio Pericumã. Essa boa localização contribuiu para o crescimento econômico dessa cidade ao longo dos séculos.",
 		"Um suspeito passou por aqui e comentou sobre uma cidade que  é conhecida por sua importância na história do Maranhão. A cidade tem um centro histórico preservado, com casarões e igrejas antigas que contam parte da trajetória do estado. Talvez viajar para um desses lugares históricos possa te levar até a resposta que deseja.",
@@ -78,10 +82,10 @@ extends Control
 	"Recentemente, um rapaz suspeito perguntou-me sobre a cidade que é conhecida como a 'Princesa do Sul'. Ele disse que essa cidade é um importante polo agropecuário, responsável por grande parte da produção agrícola do estado. Além disso, a cidade possui uma bela paisagem, com rios e cachoeiras que encantam os visitantes."
 	],
 	"Timon": [
-	"Um suspeito passou por aqui e perguntou sobre o município que é considerado o 'Berço da Fé'. Ele disse que lá ocorre uma das maiores festas religiosas do estado, atraindo milhares de fiéis de todo o Brasil. Parece que a cidade também possui uma bela praia que é muito frequentada pelos moradores e turistas.",
-	"Um suspeito passou por aqui e disse que estava rumo a uma cidade que abriga uma importante igreja, considerada o maior centro de devoção. Essa igreja atrai peregrinos e devotos de diferentes lugares, especialmente durante as festividades religiosas.",
-	"Um sujeito suspeito comentou sobre uma cidade com uma história muito rica e que, durante o século XX, passou por um processo de urbanização significativo e um aumento na população devido à sua proximidade com a capital, São Luís. Muito provavelmente ele estava indo em direção a este lugar."
-
+	"Ei, amigo! Esse suspeito estava a caminho de uma cidade, onde ocorreu uma rebelião indígena há tempos, ele havia dito que foi o maior massacre de índios contra brancos da história. Talvez você o encontre  lá.",
+	"Siô! Eu fiquei sabendo de um negócio aí! Esse suspeito deve ter ido para  a cidade que foi considerada pelas autoridades religiosas como 'as primícias do século XX'. Nesse lugar, ocorreu um massacre que teve grande repercussão em todo o Brasil. A rebelião dos guajajaras chocou a sociedade e evidenciou a luta pela preservação dos direitos indígenas.",
+	"Meu caro amigo. eu acho que esse suspeito foi para  uma cidade que aconteceu algo muito sombrio. Uma rebelião indígena resultou em um massacre chocante. Os guajajaras,  se revoltaram com a imposição de uma nova forma de vida, atacando os missionários. Talvez você encontre esse suspeito por lá."
+	
 	],
 	"Balsas": [ 
 	"Cara, um indivíduo duvidoso passou por aqui comentando sobre uma cidade que é cortada pelo rio de mesmo nome, que foi fundamental para o desenvolvimento da região e que contém várias histórias sobre seu respeito e muitos segredos. Ele contava isso entusiasmado, me parece que estava ansioso para ir para lá, por algum motivo.",
@@ -101,24 +105,29 @@ extends Control
 
 	],
 	"Itapecuru": [ 
-	"!!!!  ",
-	"!!!" ,
-	"!!!"
+	"Olá, aventureiro! Tive um encontro com um sujeito suspeito outro dia. Ele estava curioso sobre uma cidade que nasceu graças ao desbravamento da região durante a construção da BR-010, a Belém-Brasília. O pessoal começou a se aglomerar perto de um riacho na década de 60. Consegue decifrar essa charada?",
+	"Ei, amigo! Recebi uma informação quente por aqui. Um suspeito mencionou uma cidade que se tornou independente de Imperatriz no ano de 1981. Logo após a emancipação, a atividade madeireira ganhou destaque na década de 1980. Além disso, a construção da Estrada de Ferro Carajás e da Ferrovia Norte Sul trouxeram as primeiras siderúrgicas para essa cidade.",
+	"Ouça bem, parceiro! Parece que alguém suspeito estava intrigado com uma cidade que deu um salto econômico e populacional graças a um projeto grandioso comandado pelo Engenheiro Bernardo Sayão, sob as ordens do presidente Juscelino Kubitschek. Você sabe que cidade é essa?"
+	
 	],
 	"Açailândia": [ 
-	"Uma pessoa muito estranho passou por aqui agorinha, ele disse que estava indo participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
-	"Rapaz, parece que siim, tinha uma pessoa aqui  dizendo que estava indo para uma cidade aí, disse que os edifícios estavam ficando ruins e as pessoas estavam indo embora de lá, não sei oque ele quis dizer com isso. ",
-	"Havia uma pessoa bem suspeito por aqui, ela me disse que estava a caminho da cidade que foi a maior indústria do Estado, mas que está decaindo aos poucos depois da abolição da escravatura, na verdade achei isso tudo bem estranho."
+	" ",
+	" ",
+	" "
 	],
 	"Godofredo Viana": [
-	" Siô, uma pessoa estranha esses dias me perguntou na rua pra que rumo ficam os lençóis maranhenses. Acho que muita gente como ele tá se interessando em conhecer esse lugar, afinal, começaram a divulgar bastante as belezas naturais de lá. Ou então ele queria arrumar emprego, porque a demanda de lá deve aumentar agora com essas divulgações.",
-	"Rapaz, um dia desse passou um homem perguntando por um lugar que haviam descoberto petróleo aqui no Maranhão. Eu não me lembro direito, mas um pessoal respondeu a ele que nesse lugar tinha umas dunas de areia. Agora eu mesmo não sei onde fica isso, você sabe!?",
-	"Meu fi, esses dias um rapaz me perguntou onde ficava um lugar que tinha acabado de se emancipar lá pro norte. Eu não soube respondê-lo, mas ele, convicto, disse que estava a caminho de lá"
+	"Siô, falaram por aí que esse suspeito estava em  uma cidade do estado, pelo que fiquei sabendo essa cidade teve o território  desmembrado  de são luiz gonzaga, e com o passar do tempo outros municípios foram surgindo a partir dela, como lago verde e olho d'águas das cunhãs.",
+	"Meu jovem, esse suspeito disse que ia sair de barco pelo rio mearim rumo a uma cidade que desde sua fundação vem experimentando um grande crescimento urbano. Esse lugar que, originalmente era uma área de pastagens e fazendas, veio a se tornar um centro econômico e comercial na região.",
+	"Rapaz, um sujeito bem estranho passou dizendo que ia para uma  cidade aí, ele até disse o nome, mas não lembro bem, só lembro que ele disse  que a inspiração para o nome dessa cidade foi um pé de bacaba."
+
+	
 	],
 	"Luís Domingues": [ 
-	"Uma pessoa muito estranho passou por aqui agorinha, ele disse que estava indo participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
-	"Rapaz, parece que siim, tinha uma pessoa aqui  dizendo que estava indo para uma cidade aí, disse que os edifícios estavam ficando ruins e as pessoas estavam indo embora de lá, não sei oque ele quis dizer com isso. ",
-	"Havia uma pessoa bem suspeito por aqui, ela me disse que estava a caminho da cidade que foi a maior indústria do Estado, mas que está decaindo aos poucos depois da abolição da escravatura, na verdade achei isso tudo bem estranho."
+	"Ei! Sabe aquela cidade do Maranhão que foi emancipada em 1959, após anos de subordinação a São José de Ribamar? Bem, esse suspeito pode ter ido pra lá, até fiquei sabendo que o primeiro prefeito dessa cidade foi  um certo Pedro Ferreira da Cruz. Boa sorte com a busca!",
+	"Oi, aventureiro! Ouvi dizer que o suspeito passou por aqui e comentou sobre um bairro histórico chamado Maiobão. Durante o período republicano, esse bairro foi fundado como um importante centro de produção agrícola, impulsionado pela introdução da cultura do arroz na região.",
+	"Ei, amigo! Ouvi dizer que o suspeito andou perguntando como chegar na cidade que teve sua emancipação política  através de São josé de Ribamar em 1959. Eu até ajudei ele, disse que essa cidade teve um ótimo  desenvolvimento e crescimento econômico, pois está localizada bem próximo à capital."
+	
+	
 	]
 }
 #LISTA DE PERSONAGENS
@@ -330,16 +339,18 @@ func f_caminho():
 		verifica = true
 	elif Global.cidade== "Timon" and Global.caminho[10]==1:
 		verifica = true
-	elif Global.cidade== "São José de Ribamar" and Global.caminho[11]==1:
+	elif Global.cidade== "Barra do Corda" and Global.caminho[11]==1:
 		verifica = true
-	elif Global.cidade== "Luís Domingues" and Global.caminho[12]==1:
+	elif Global.cidade== "São José de Ribamar" and Global.caminho[12]==1:
 		verifica = true
-	elif Global.cidade== "Paço do Lumiar" and Global.caminho[13]==1:
+	elif Global.cidade== "Luís Domingues" and Global.caminho[13]==1:
 		verifica = true
-	elif Global.cidade== "Balsas" and Global.caminho[14]==1:
+	elif Global.cidade== "Paço do Lumiar" and Global.caminho[14]==1:
 		verifica = true
-	elif Global.cidade== "Itapecuru" and Global.caminho[15]==1:
+	elif Global.cidade== "Balsas" and Global.caminho[15]==1:
 		verifica = true
-	elif Global.cidade== "Açailândia" and Global.caminho[16]==1:
+	elif Global.cidade== "Itapecuru" and Global.caminho[16]==1:
+		verifica = true
+	elif Global.cidade== "Açailândia" and Global.caminho[17]==1:
 		verifica = true
 		

@@ -41,10 +41,7 @@ func _on_cidade_atual_pressed():
 
 func _on_menu_pressed():
 	Musica.som_botao()
-	Global.vetorNomes[Global.i] = Global.nome
-	Global.vetorOndeParou[Global.i] = Global.cidade
-	Global.vetorPontos[Global.i] = Global.pontos
-	Global.vetVidas[Global.i] =Global.pena
+	Global.SalvarDados()
 	
 	get_tree().change_scene_to_file("res://cenas/MENU.tscn" )
 	pass # Replace with function body.
@@ -80,18 +77,20 @@ func f_caminho():
 		Global.caminho[9]=1
 	elif Global.outra_cidade== "Timon" and Global.caminho[10]==0:
 		Global.caminho[10]=1
-	elif Global.outra_cidade== "São José de Ribamar" and Global.caminho[11]==0:
+	elif Global.outra_cidade== "Barra do Corda" and Global.caminho[11]==0:
 		Global.caminho[11]=1
-	elif Global.outra_cidade== "Luís Domingues" and Global.caminho[12]==0:
+	elif Global.outra_cidade== "São José de Ribamar" and Global.caminho[12]==0:
 		Global.caminho[12]=1
-	elif Global.outra_cidade== "Paço do Lumiar" and Global.caminho[13]==0:
+	elif Global.outra_cidade== "Luís Domingues" and Global.caminho[13]==0:
 		Global.caminho[13]=1
-	elif Global.outra_cidade== "Balsas" and Global.caminho[14]==0:
+	elif Global.outra_cidade== "Paço do Lumiar" and Global.caminho[14]==0:
 		Global.caminho[14]=1
-	elif Global.outra_cidade== "Itapecuru" and Global.caminho[15]==0:
+	elif Global.outra_cidade== "Balsas" and Global.caminho[15]==0:
 		Global.caminho[15]=1
-	elif Global.outra_cidade== "Açailândia" and Global.caminho[16]==0:
+	elif Global.outra_cidade== "Itapecuru" and Global.caminho[16]==0:
 		Global.caminho[16]=1
+	elif Global.outra_cidade== "Açailândia" and Global.caminho[17]==0:
+		Global.caminho[17]=1
 	print("depois da funcao de controle "+ str(Global.caminho))
 	
 	

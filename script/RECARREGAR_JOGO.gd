@@ -2,6 +2,8 @@ extends Control
 
 
 func _ready():
+	print("vidas: "+str(Global.vetVidas))
+	print("vidas "+ str(Global.pena))
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -17,6 +19,7 @@ func _ready():
 	var n =Global.vetorNomes.find("")
 	for i in range(0,n):
 		$TextEdit/OptionButton.add_item(Global.vetorNomes[i])
+	
 	pass # Replace with function body.
 	
 
@@ -32,7 +35,10 @@ func _on_botao_3_pressed():
 var encontrar_jogador
 
 func _on_botao_2_pressed():
-	
+	print(Global.pena)
+	if Global.pena == -1:
+		print("entrou")
+		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")
 	encontrar_jogador=Global.vetorNomes.find($TextEdit/OptionButton.text)
 	Global.i = encontrar_jogador 
 	Global.nome = Global.vetorNomes[Global.i]

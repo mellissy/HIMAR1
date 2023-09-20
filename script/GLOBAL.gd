@@ -2,13 +2,16 @@ extends Node
 
 var cidade = "São Luís"
 var outra_cidade = "São Luís"
-var pena = 9
+var pena = 0
 var botao = 0
 var som = true
 var cont = 1
 var anterior = true
-var cidades_certas = " Codó - Barreirinhas - Alcântara - Pindaré - Grajaú - Imperatriz - São Luís "
-var cidades_cetas_novas = " Barra do Corda - Bacabal - Paço do Lumiar - Timon - Balsas - Pinheiro - São José de Ribamar - Itapecuru - Açailândia - Godofredo Viana - Luís Domingues "
+var cidades_certas = " Codó - Barreirinhas - Alcântara - Pindaré - Grajaú -
+ Imperatriz - São Luís "
+var cidades_cetas_novas = " Barra do Corda - Bacabal - 
+Paço do Lumiar - Timon - Balsas - Pinheiro - São José de Ribamar - 
+Itapecuru - Açailândia - Godofredo Viana - Luís Domingues "
 var caminho = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var button = true
 
@@ -27,4 +30,11 @@ var i = 0
 var vetorNomes=["", "", "", "", "", "", "", "", "", ""]
 var vetorOndeParou=["", "", "", "", "", "", "", "", "", ""]
 var vetorPontos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-var vetVidas = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+var vetVidas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+func SalvarDados():
+	Global.vetorNomes[Global.i] = Global.nome
+	Global.vetorOndeParou[Global.i] = Global.cidade
+	Global.vetorPontos[Global.i] = Global.pontos
+	Global.vetVidas[Global.i] =Global.pena
+

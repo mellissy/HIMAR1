@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnsomgib1jhxi"]
+[gd_scene load_steps=9 format=3 uid="uid://bnsomgib1jhxi"]
 
 [ext_resource type="Script" path="res://script/OPCOES.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
 [ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_r0stv"]
+[ext_resource type="Texture2D" uid="uid://b3y5unrbl0u6p" path="res://tudo/imagens/outros/teclaSomPresionada.png" id="8_vgmdm"]
 
 [node name="OPCOES" type="Control"]
 layout_mode = 3
@@ -105,6 +106,16 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_r0stv")
+
+[node name="som" type="Sprite2D" parent="."]
+position = Vector2(164, 237)
+scale = Vector2(0.548611, 0.539063)
+texture = ExtResource("8_vgmdm")
+
+[node name="efeito" type="Sprite2D" parent="."]
+position = Vector2(166, 310)
+scale = Vector2(0.548611, 0.539063)
+texture = ExtResource("8_vgmdm")
 
 [connection signal="pressed" from="botao1" to="." method="_on_botao1_pressed"]
 [connection signal="pressed" from="caixa_musica" to="." method="_on_caixa_musica_pressed"]

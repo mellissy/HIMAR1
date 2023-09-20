@@ -16,8 +16,8 @@ func _ready():
 	pontuacao()
 	Global.pena = Global.pena-1
 	f_caminho()
-	if Global.cidade == "Luís Domingues":
-		Global.pena = 9
+	if Global.cidade == "São José de Ribamar" and Global.outra_cidade == "Barra do Corda":
+		Global.pena = Global.pena + 6
 		print("Jogo recarregado!")
 	if Global.pena<0:
 		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn"  )
@@ -119,18 +119,20 @@ func f_caminho():
 		Global.caminho[9]=0
 	elif Global.outra_cidade== "Timon" and Global.caminho[10]==1:
 		Global.caminho[10]=0
-	elif Global.outra_cidade== "São José de Ribamar" and Global.caminho[11]==1:
+	elif Global.outra_cidade== "Barra do Corda" and Global.caminho[11]==1:
 		Global.caminho[11]=0
-	elif Global.outra_cidade== "Luís Domingues" and Global.caminho[12]==1:
+	elif Global.outra_cidade== "São José de Ribamar" and Global.caminho[12]==1:
 		Global.caminho[12]=0
-	elif Global.outra_cidade== "Paço do Lumiar" and Global.caminho[13]==1:
+	elif Global.outra_cidade== "Luís Domingues" and Global.caminho[13]==1:
 		Global.caminho[13]=0
-	elif Global.outra_cidade== "Balsas" and Global.caminho[14]==1:
+	elif Global.outra_cidade== "Paço do Lumiar" and Global.caminho[14]==1:
 		Global.caminho[14]=0
-	elif Global.outra_cidade== "Itapecuru" and Global.caminho[15]==1:
+	elif Global.outra_cidade== "Balsas" and Global.caminho[15]==1:
 		Global.caminho[15]=0
-	elif Global.outra_cidade== "Açailândia" and Global.caminho[16]==1:
+	elif Global.outra_cidade== "Itapecuru" and Global.caminho[16]==1:
 		Global.caminho[16]=0
+	elif Global.outra_cidade== "Açailândia" and Global.caminho[17]==1:
+		Global.caminho[17]=0
 	
 	
 func caminho_certo():

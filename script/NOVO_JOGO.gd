@@ -5,7 +5,8 @@ var db
 var db_name = "res://SQLite/database.db"
 
 func _ready():
-	
+	print("vidas: "+str(Global.vetVidas))
+	print("vidas "+ str(Global.pena))
 	db = SQLite.new()
 	db.path = db_name
 	db.open_db()
@@ -29,11 +30,6 @@ func _ready():
 	var n_vetor
 	n_vetor=Global.vetorNomes.find("")
 	Global.i = n_vetor
-	
-	#print(Global.vetorNomes[Global.i])
-	
-	
-	
 	
 	pass
 

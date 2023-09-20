@@ -15,7 +15,8 @@ func _ready():
 	$botao3/Label.modulate = Color(0,0,0,1)
 	$botao4/Label.text= "INSTRUÇÕES"
 	$botao4/Label.modulate = Color(0,0,0,1)
-	
+	print("vidas: "+str(Global.vetVidas))
+	print("vidas "+ str(Global.pena))
 	
 	pass
 
