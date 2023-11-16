@@ -1,9 +1,10 @@
+Timer
 Sprite2D
+VideoStreamPlayer
 AudioStreamPlayer
 AudioStreamPlayer2D
 OptionButton
 Window
-Timer
 Label
 TextureButton
 Button

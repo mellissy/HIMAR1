@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvemvrc4n7j1m"]
 
 [ext_resource type="Script" path="res://script/video_da_reliquia1.gd" id="1_m578c"]
-[ext_resource type="AudioStream" uid="uid://bac64lm3je327" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_hdtfg"]
-[ext_resource type="FontFile" uid="uid://qbn1wgjqfo6f" path="res://tudo/fonts/vademecum.ttf" id="8_rv80r"]
+[ext_resource type="AudioStream" uid="uid://cncxsbo7uc0wl" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_hdtfg"]
+[ext_resource type="FontFile" uid="uid://cykfpl3xyrxcw" path="res://tudo/fonts/vademecum.ttf" id="8_rv80r"]
 
 [node name="video_da_reliquia1" type="Control"]
 layout_mode = 3

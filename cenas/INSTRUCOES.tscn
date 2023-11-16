@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cncpiks07u0w7"]
 
 [ext_resource type="Script" path="res://script/INSTRUCOES.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
-[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_bxvux"]
-[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_3kidp"]
+[ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://btceo6bw1ii0v" path="res://tudo/imagens/menu/comeca.jpg" id="6"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="6_bxvux"]
+[ext_resource type="AudioStream" uid="uid://djsw08q0rdvuo" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_3kidp"]
 
 [node name="INSTRUCOES" type="Control"]
 layout_mode = 3
@@ -16,7 +16,7 @@ offset_right = -7.0
 script = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(176, 320)
+position = Vector2(189, 329)
 scale = Vector2(0.5, 0.52)
 texture = ExtResource("6")
 
@@ -26,49 +26,7 @@ offset_left = 69.0
 offset_top = 165.0
 offset_right = 307.0
 offset_bottom = 387.0
-text = "- Para coletar as pistas e encontrar a 
-relíquia roubada, você irá visitar um
- cenário. Em cada cenário existem 3 
-pistas   pontos   distintos   da    tela.
-
-- As   pistas   serão   fornecidas   por 
-personagens  que estão  localizados
- nos cenários. Preste muita  atenção
- nas dicas dadas  pelos personagens 
-pois elas lhe  encaminharão  para  o 
-próximo destino  em que o  suspeito 
-do roubo viajou. 
-
-- Toda vez  que  você estiver  em  um
- cenário,  terá a   opção  de evocar  o 
-Cazumba  para fazer  sua  viagem  no 
-tempo, não precisa  necessariamente
- coletar  todas  as  pistas do  cenário,
- basta  tocar na  opção  “CAZUMBAR”.
-
-- No  comando   viajar,  ele terá  três 
-opções  de  destino que  poderão ser 
-padronizadas   em   data   ou   locais.
-
- - O       Cazumba,       possui      uma
- quantidade     limitada  de    energia,
- portanto,  você terá apenas algumas
- viagens     no   tempo     disponíveis. 
- Assim,  se   errar   muitas   vezes as 
-opções  de  lugares/datas  sugeridos,
- o suspeito irá escapar e perderemos 
-definitivamente a relíquia.
-
-- Seguindo  corretamente  as  dicas
- você    encontrará   o   suspeito   e 
- recuperará a relíquia.
-
-- Siga     corretamente    as     pistas, 
- pesquise, pergunte, mas não  deixe
- de   recuperar  a relíquia roubada, o
- equilíbrio  das  forças no  Maranhão 
- depende de você. Boa sorte  na sua 
- aventura!"
+theme_override_font_sizes/normal_font_size = 14
 
 [node name="botao1" type="TextureButton" parent="."]
 layout_mode = 0

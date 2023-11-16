@@ -1,9 +1,13 @@
 extends Control
 
+const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
+var db
+var db_name = "res://SQLite/database.db"
+
 
 @onready var path = {
-	"São Luís": ["Imperatriz", "Barreirinhas", "Codó"],
-	"Imperatriz": ["Buriticupu", "Grajaú", "Buriticupu"],
+	"São Luís": ["Imperatriz", "Guimarães", "Caxias"],
+	"Imperatriz": ["Caxias", "Grajaú", "Buriticupu"],
 	"Grajaú": ["Santa Inês", "Pindaré", "Carolina"],
 	"Carutapera": ["São Luís", "Guimarães", "Buriticupu"],
 	"Pindaré": ["Carolina", "Viana", "Codó"],
@@ -33,7 +37,7 @@ extends Control
 	"Itapecuru": ["Pinheiro", "Bacabal", "Açailândia"],
 	"Açailândia": ["Timon", "Itapecuru", "Balsas"],
 	"Godofredo Viana": ["São José de Ribamar", "Paço do Lumiar", "Bacabal"],
-	"Luís Domingues":["São Luís", "Godofredo Viana", "Paço do Lumiar"],
+	"Luís Domingues":["Balsas", "Godofredo Viana", "Paço do Lumiar"],
 	
 }
 var current
@@ -46,6 +50,7 @@ func _ready():
 	$botao1/Label.text = "VOLTAR"
 	$botao1/Label.modulate = Color(0,0,0,1)
 	$Label.modulate = Color(0,0,0,1)
+	
 
 	
 	current = Global.cidade
@@ -60,6 +65,25 @@ func _ready():
 	
 	pass
 	var cidade_mais_antiga
+	
+func moveu(cenain):
+	
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
+	db.query_with_bindings("select * from infojogador where status = '1';",[])
+	var player = db.query_result
+	db.query_with_bindings("select * from cidades where nome = ?;", [cenain])
+	var cidade = db.query_result
+	db.query_with_bindings("select * from pontos where cenaout = ? AND cenain = ?;", [player[0].cenain, cidade[0].id])
+	var pontos = db.query_result
+	var ponto = 0
+	if len(pontos) > 0:
+		ponto = pontos[0].ponto
+		
+	db.query_with_bindings("update infojogador set cenain = ?, cenaout = ?, penas = ?, score = ? where status = '1';", 
+	[cidade[0].id, player[0].cenain, player[0].penas-1, player[0].score+ponto])
+	db.close_db()
 
 func _on_botao1_pressed():
 	Musica.som_botao()
@@ -67,13 +91,12 @@ func _on_botao1_pressed():
 	pass # Replace with function body.
 	
 func _on_botao2_pressed():
-	#caminho_certo()
 	Musica.som_botao()
-	
 	Global.outra_cidade = current
 	Global.cidade = path[current][0]
 	Global.anterior = false
 	caminho_certo()
+	moveu(Global.cidade)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
@@ -84,16 +107,17 @@ func _on_botao3_pressed():
 	Global.cidade = path[current][1]
 	Global.anterior = false
 	caminho_certo()
+	moveu(Global.cidade)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 
 func _on_botao4_pressed():
-	#caminho_certo()
 	Musica.som_botao()
 	Global.outra_cidade = current
 	Global.cidade = path[current][2]
 	Global.anterior = false
 	caminho_certo()
+	moveu(Global.cidade)
 	get_tree().change_scene_to_file("res://cenas/DANCA.tscn"  )
 	pass # Replace with function body.
 	

@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctkm4s2g3nf8t"]
+
+[ext_resource type="Script" path="res://script/game_over.gd" id="1_xdvbq"]
+[ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="2_wrqxt"]
+[ext_resource type="VideoStream" path="res://tudo/Videos/video_game_over.ogv" id="2_wvibo"]
+[ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="3_xpu8i"]
+[ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="4_1rc34"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="5_gy4bw"]
+[ext_resource type="AudioStream" uid="uid://cncxsbo7uc0wl" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="6_o2vme"]
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdvbq")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 362.0
+offset_bottom = 644.0
+stream = ExtResource("2_wvibo")
+autoplay = true
+expand = true
+
+[node name="botao1" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 102.0
+offset_top = 557.0
+offset_right = 325.0
+offset_bottom = 635.0
+scale = Vector2(0.6, 0.6)
+disabled = true
+texture_normal = ExtResource("2_wrqxt")
+texture_pressed = ExtResource("3_xpu8i")
+texture_hover = ExtResource("4_1rc34")
+
+[node name="Label" type="Label" parent="botao1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 217.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("5_gy4bw")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_o2vme")
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="botao1" to="." method="_on_botao_1_pressed"]

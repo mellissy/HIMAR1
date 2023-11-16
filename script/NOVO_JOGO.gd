@@ -47,6 +47,8 @@ func _insertDB():
 		db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 		player = db.query_result
 	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0]["id"]])
+	#db.query_with_bindings("update infojogador set cenain = ?, cenaout = ?, score = ?, penas = ? where status = 1;", [player[0][Global.i][Global.i]["status"]])
+	
 	
 	db.close_db()
 	
@@ -65,6 +67,8 @@ func _on_botao2_pressed():
 	#print(Global.caminho)
 	#Global.vetorNomes[Global.i] = $TextEdit.text
 	Global.nome = $TextEdit.text
-	if _insertDB():
+	#if _insertDB():
+	if $TextEdit.text != "" and $TextEdit.text != " " and $TextEdit.text != "  ":
+		_insertDB()
 		get_tree().change_scene_to_file("res://cenas/VIDEO_INICIAL.tscn"  )
 	pass # Replace with function body.

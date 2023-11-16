@@ -6,7 +6,6 @@ extends Control
 # -> Paço do Lumiar -> Balsas -> Itapecuru -> Acailandia (Reliquia 2)
 
 func _ready():
-	#caminho_certo()
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -20,7 +19,7 @@ func _ready():
 		Global.pena = Global.pena + 6
 		print("Jogo recarregado!")
 	if Global.pena<0:
-		get_tree().change_scene_to_file("res://cenas/RELIQUIAS.tscn"  )
+		get_tree().change_scene_to_file("res://cenas/game_over.tscn" )
 		
 	pass
 

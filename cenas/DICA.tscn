@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bs60ehaxylsw"]
 
-[ext_resource type="Texture2D" uid="uid://bmhq3oqo07e30" path="res://tudo/imagens/personagens/Zezinho.jpg" id="2_42m5y"]
-[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c5r1uxtp0wfg5" path="res://tudo/imagens/personagens/Zezinho.jpg" id="2_42m5y"]
+[ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="5"]
 [ext_resource type="Script" path="res://script/DICA.gd" id="6"]
-[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
-[ext_resource type="Texture2D" uid="uid://bkirorrdougyn" path="res://tudo/Botoes/caixaTexto.png" id="7_l01bs"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="6_kepbp"]
+[ext_resource type="Texture2D" uid="uid://d1oiia7kdqle1" path="res://tudo/Botoes/caixaTexto.png" id="7_l01bs"]
 
 [node name="DICA" type="Control"]
 layout_mode = 3
@@ -64,16 +64,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(164.875, 300)
-scale = Vector2(0.513542, 0.546875)
+position = Vector2(175.5, 306)
+scale = Vector2(0.543056, 0.55625)
 texture = ExtResource("7_l01bs")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 448.0
-offset_right = 283.0
-offset_bottom = 607.0
+offset_left = 57.0
+offset_top = 453.0
+offset_right = 311.0
+offset_bottom = 624.0
 theme_override_font_sizes/font_size = 10
 text = "bgfvgsvsvfvsyvyrs"
 horizontal_alignment = 1

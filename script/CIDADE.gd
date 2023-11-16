@@ -112,8 +112,7 @@ var db_name = "res://SQLite/database.db"
 	"Luís Domingues": [ Vector2(247,50),Vector2(253,60),Vector2(270,55) ],
 	
 	}
-@onready var moita = {
-	
+@onready var luminaria = {
 	"São Luís":  [Vector2(190,372)],
 	"Grajaú":  [Vector2(200,440)],
 	"Imperatriz":  [Vector2(163,266)],
@@ -128,7 +127,6 @@ var db_name = "res://SQLite/database.db"
 	"Carolina":  [Vector2(113,307)], #
 	"Santa Inês":  [Vector2(144,347)],
 	"Viana":  [Vector2(187,303)],
-	##############################
 	"Barra do Corda":  [Vector2(142,266)],
 	"Bacabal":  [Vector2(184,315)],
 	"Paço do Lumiar":  [Vector2(183,277)],
@@ -143,10 +141,14 @@ var db_name = "res://SQLite/database.db"
 }
 
 func _ready():
-	print("vidas: "+str(Global.vetVidas))
-	print("vidas "+ str(Global.pena))
+	#print("cidade "+ Global.cidade)
+	#print("outra cidade "+ Global.outra_cidade)
+	#print("vidas: "+str(Global.vetVidas))
+	#print("vidas "+ str(Global.pena))
+	#print("Valor do i ")
+	#print(Global.i)
 	if Global.pena <= -1:
-		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
+		get_tree().change_scene_to_file( "res://cenas/game_over.tscn" )
 		
 	#var p = str(Global.caminho)
 	#print("caminho da cidade é "+ p)
@@ -180,11 +182,12 @@ func _ready():
 	$dica1.size = size_b[Global.cidade][0]
 	$dica2.size = size_b[Global.cidade][1]
 	$dica3.size = size_b[Global.cidade][2]
-	$moita.position = moita[Global.cidade][0]
+	$luminaria.position = luminaria[Global.cidade][0]
 	
 	print("outra cidade "+ Global.outra_cidade)
 	print(" cidade "+ Global.cidade)
 	print("Dentro da cidade "+ str(Global.caminho))
+	print("Reliquia "+str(Global.cont_reliquia))
 	#tamanho_do_nome()
 	
 	pass
@@ -214,17 +217,19 @@ func _on_dica1_pressed():
 	Musica.som_botao()
 	Global.botao = 0
 	#write(num1 + ":" + current + ";" + num2)
-	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
+	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" and Global.cont_reliquia <2:
+		
 		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
 	pass # Replace with function body.
-
+	
 func _on_dica2_pressed():
+	
 	Global.botao = 1
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
-	if( Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" ) or ( Global.cidade == "Alcântara" and Global.outra_cidade == "Barreirinhas" ) :
+	if( Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" and Global.cont_reliquia <2 )  or ( Global.cidade == "Alcântara" and Global.outra_cidade == "Barreirinhas" and Global.cont_reliquia <1 )  :
 		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -234,7 +239,7 @@ func _on_dica3_pressed():
 	Global.botao = 2
 	Musica.som_botao()
 	#write(num1 + ":" + current + ";" + num2)
-	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
+	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" and Global.cont_reliquia <2 :
 		get_tree().change_scene_to_file("res://cenas/video_da_reliquia_1.tscn" )
 	else:
 		get_tree().change_scene_to_file("res://cenas/DICA.tscn" )
@@ -256,11 +261,11 @@ var move = true
 var cont
 func _on_timer_timeout():
 	if num%2==0:
-		$moita.texture_normal = load("res://tudo/imagens/outros/Luminaria com luz.png" )
-		#$moita.flip_h = true
+		$luminaria.texture_normal = load("res://tudo/imagens/outros/Luminaria com luz.png" )
+		#$luminaria.flip_h = true
 	else: 
-		$moita.texture_normal = load( "res://tudo/imagens/outros/luminária que está valendo .png")
-		#$moita.flip_h = false
+		$luminaria.texture_normal = load( "res://tudo/imagens/outros/luminária que está valendo .png")
+		#$luminaria.flip_h = false
 	num= num+1
 	#cont = cont +1
 	if move == true:

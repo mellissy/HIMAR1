@@ -36,6 +36,6 @@ func _on_botao1_pressed():
 		Global.vetorOndeParou[Global.i] = Global.cidade
 		Global.vetorPontos[Global.i] = Global.pontos
 		Global.vetVidas[Global.i] =Global.pena
-		get_tree().change_scene_to_file("res://cenas/MENU.tscn" )
+		get_tree().change_scene_to_file(  "res://cenas/creditos.tscn" )
 	pass # Replace with function body.
 

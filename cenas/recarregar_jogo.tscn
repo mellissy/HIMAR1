@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://bq7t5astiuf2m"]
 
 [ext_resource type="Script" path="res://script/RECARREGAR_JOGO.gd" id="1_wnmjs"]
-[ext_resource type="Texture2D" uid="uid://b7gsdy31or5sr" path="res://tudo/imagens/menu/comeca.jpg" id="2_0u26l"]
-[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3_gpiws"]
-[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="4_3t4uh"]
-[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="5_5uahl"]
-[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_hgube"]
-[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_0rtmg"]
+[ext_resource type="Texture2D" uid="uid://btceo6bw1ii0v" path="res://tudo/imagens/menu/comeca.jpg" id="2_0u26l"]
+[ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="3_gpiws"]
+[ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="4_3t4uh"]
+[ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="5_5uahl"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="6_hgube"]
+[ext_resource type="AudioStream" uid="uid://djsw08q0rdvuo" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="7_0rtmg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kxdxw"]
 blend_mode = 2

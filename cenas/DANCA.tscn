@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://b37fcm7k338hf"]
 
-[ext_resource type="VideoStream" path="res://tudo/Videos/video_de_viagem_novo.ogv" id="2_u6iqj"]
-[ext_resource type="Texture2D" uid="uid://c2wiqqgfcuw03" path="res://tudo/Botoes/botao.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://es4pidv528oc" path="res://tudo/Botoes/BotaoClique.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://bxytpcr1txv48" path="res://tudo/Botoes/botaoAoClicar.png" id="5"]
+[ext_resource type="VideoStream" path="res://tudo/Videos/danca_final.ogv" id="2_bdqff"]
+[ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="5"]
 [ext_resource type="Script" path="res://script/DANCA.gd" id="6"]
-[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="6_jqpse"]
-[ext_resource type="AudioStream" uid="uid://bac64lm3je327" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_dj3n2"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="6_jqpse"]
+[ext_resource type="AudioStream" uid="uid://cncxsbo7uc0wl" path="res://tudo/sons/musicaDaDancaCazumba.mp3" id="7_dj3n2"]
 
 [node name="DANCA" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ script = ExtResource("6")
 layout_mode = 0
 offset_right = 362.0
 offset_bottom = 644.0
-stream = ExtResource("2_u6iqj")
+stream = ExtResource("2_bdqff")
 autoplay = true
 expand = true
 

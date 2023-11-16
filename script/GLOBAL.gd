@@ -2,10 +2,11 @@ extends Node
 
 var cidade = "São Luís"
 var outra_cidade = "São Luís"
-var pena = 0
+var pena = 5
 var botao = 0
 var som = true
 var cont = 1
+var cont_reliquia = 0
 var anterior = true
 var cidades_certas = " Codó - Barreirinhas - Alcântara - Pindaré - Grajaú -
  Imperatriz - São Luís "
@@ -27,14 +28,17 @@ var nome = " "
 var pontos = 0.0
 #var count_jogador
 var i = 0
-var vetorNomes=["", "", "", "", "", "", "", "", "", ""]
-var vetorOndeParou=["", "", "", "", "", "", "", "", "", ""]
+var vetorNomes=["yy", "ww", "kk", "", "", "", "", "", "", ""]
+var vetorOndeParou=["sao", "", "", "", "", "", "", "", "", ""]
+var cidadeAnterior=["bal", "", "", "", "", "", "", "", "", ""]
 var vetorPontos = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var vetVidas = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 func SalvarDados():
-	Global.vetorNomes[Global.i] = Global.nome
-	Global.vetorOndeParou[Global.i] = Global.cidade
-	Global.vetorPontos[Global.i] = Global.pontos
-	Global.vetVidas[Global.i] =Global.pena
+	vetorNomes[i] = nome
+	vetorOndeParou[i] = cidade
+	vetorPontos[i] = pontos
+	vetVidas[i] = pena
+	cidadeAnterior[i] = outra_cidade
+	
 

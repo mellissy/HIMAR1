@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="HIMAR1"
-run/main_scene="res://cenas/MENU.tscn"
-config/features=PackedStringArray("4.0")
-config/icon="res://icon.png"
+config/name="HIMAR"
+run/main_scene="res://cenas/INICIO.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://icon.svg"
 
 [autoload]
 
@@ -23,22 +23,10 @@ Musica="*res://cenas/musica.tscn"
 [display]
 
 window/size/viewport_width=350
-window/size/initial_position_type=0
+window/size/viewport_height=640
 window/handheld/orientation=1
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="HIMAR1"
-
-[gui]
-
-common/drop_mouse_on_gui_input_disabled=true
-
-[physics]
-
-common/enable_pause_aware_picking=true
-
-[rendering]
-
-textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_environment="res://default_env.tres"
+project/assembly_name="Himar 1"

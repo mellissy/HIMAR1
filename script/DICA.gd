@@ -23,7 +23,7 @@ extends Control
 	"São Luís": [ 
 		"Hê, 'sinhô'! Parece que vi um negócio sim! Um suspeito passou por aqui e perguntou se eu sei onde fica a segunda cidade mais populosa do estado. Aquela que cresceu a economia e a população com a criação da estrada Belém Brasília.",
 		"Oiii! Passou simmm, eu vi! Uma pessoa suspeita passou por aqui e disse que ia para a cidade que abastecia o garimpo de Serra Pelada. Eu não entendi foi nada.",
-		"O quê? suspeito? Suspeito de quê? Uma pessoa que parecia suspeito por aqui. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu sou criança, nem entendi nada disso."
+		"O quê? suspeito? Siô, uma pessoa bem suspeita passou por aqui mesmo. Ela falou alguma coisa sobre um lugar que até a década de 1980, vivia o ciclo do arroz. Alguma coisa como Corredor Agrícola. Mas eu não entendi nada do que ele disse."
 	],
 	"Imperatriz": [
 		
@@ -32,7 +32,7 @@ extends Control
 		"Hoo meu 'fíí'! Passou um cabôco diferente por aqui! Mas eu nem 'intendi' direito o que ele queria não. Falou umas coisas sobre uma guerra que queria a independência política do sertão do maranhão. "
 	],
 	"Grajaú": [
-	"Siim. Um suspeito havia me imformado que um novo município estava sendo gerado a partir da cidade de monção. Ah, ele também disse que esse municipio se chama Engenho de São Pedro de Alcântara.",
+	"Siim. Um suspeito havia me informado que um novo município estava sendo gerado a partir da cidade de monção. Ah, ele também disse que esse municipio se chama Engenho de São Pedro de Alcântara.",
 	"Sim, ele me afirmou que estava indo para uma cidade aí. Não lembro o nome, mas sei que lá tem um Engenho quase fechando as portas por causa da decadência da indústria açucareira.",
 	"Siô. Agora pouco passou um  suspeito dizendo que ia presenciar a construção da  ferrovia que faz ligação ao Engenho Central e ao porto Terminal dos Canaviais."
 
@@ -49,8 +49,8 @@ extends Control
 	"Amigo, eu escutei um suspeito falando algo sobre uma cidade que tem uma comunidade chamada de Aurizona, por conta do ouro. Ele tava falando que de uma barragem de rejeitos que transbordou em 2021 e gerou uma enxurrada que atingiu a região gerando sérios problemas ambientais."
 	],
 	"Barreirinhas": [ 
-	"Uma pessoa muito estranho passou por aqui agorinha, ele disse que estava indo participar do debate contra os higiênitas para não demolirem a cidade, não entendi foi nada.",
-	"Rapaz, parece que siim, tinha uma pessoa aqui  dizendo que estava indo para uma cidade aí, disse que os edifícios estavam ficando ruins e as pessoas estavam indo embora de lá, não sei oque ele quis dizer com isso. ",
+	"Uma pessoa muito estranha passou por aqui agora, e ela disse que estava indo participar do debate contra os higienistas para evitar que a cidade seja demolida. Eu não entendi nada.",
+	"Rapaz, parece que siim, tinha uma pessoa aqui  dizendo que estava indo para uma cidade aí, disse que os edifícios estavam ficando ruins e as pessoas estavam indo embora de lá, não sei o que ele quis dizer com isso. ",
 	"Havia uma pessoa bem suspeito por aqui, ela me disse que estava a caminho da cidade que foi a maior indústria do Estado, mas que está decaindo aos poucos depois da abolição da escravatura, na verdade achei isso tudo bem estranho."
 	],
 	"Codó": [
@@ -71,7 +71,7 @@ extends Control
 	"Bacabal": [
 		"Um rapaz passou por aqui falando sobre uma cidade muito antiga aqui do Maranhão, que foi fundada em meados do século XIX, ainda no período colonial e que se desenvolveu como um importante centro econômico e cultural. Além disso, segundo ele, a cidade era inicialmente uma vila de pescadores, que se estabeleceram às margens do rio Pericumã. Essa boa localização contribuiu para o crescimento econômico dessa cidade ao longo dos séculos.",
 		"Um suspeito passou por aqui e comentou sobre uma cidade que  é conhecida por sua importância na história do Maranhão. A cidade tem um centro histórico preservado, com casarões e igrejas antigas que contam parte da trajetória do estado. Talvez viajar para um desses lugares históricos possa te levar até a resposta que deseja.",
-		"Um indivíduo estranho me perguntou sobre a cidade que é considerada a 'Princesa da Baixada'. Parece que este lugar é um importante centro cultural e histórico, conhecido por suas festas tradicionais e pela riqueza do artesanato local. Além disso, a cidade tem um porto que desempenha um papel fundamental no transporte de mercadorias pela região, tornando a cidade em um centro de comércio e transporte fluvial, com atividades comerciais relacionadas à pesca, agricultura e outros setores."
+		"Um indivíduo me perguntou sobre a cidade que é considerada a 'Princesa da Baixada'. Parece que este lugar é conhecido por suas festas tradicionais e pela riqueza do artesanato local. Além disso, a cidade tem um porto que desempenha um papel fundamental no transporte de mercadorias pela região, tornando a cidade em um centro de comércio e transporte fluvial, com atividades comerciais relacionadas à pesca, agricultura e outros setores."
 
 		
 		
@@ -116,7 +116,7 @@ extends Control
 	" "
 	],
 	"Godofredo Viana": [
-	"Siô, falaram por aí que esse suspeito estava em  uma cidade do estado, pelo que fiquei sabendo essa cidade teve o território  desmembrado  de são luiz gonzaga, e com o passar do tempo outros municípios foram surgindo a partir dela, como lago verde e olho d'águas das cunhãs.",
+	"Siô, falaram por aí que esse suspeito estava em  uma cidade do Estado, pelo que fiquei sabendo essa cidade teve o território  desmembrado  de São Luiz Gonzaga, e com o passar do tempo outros municípios foram surgindo a partir dela, como lago verde e Olho d´águas das Cunhãs.",
 	"Meu jovem, esse suspeito disse que ia sair de barco pelo rio mearim rumo a uma cidade que desde sua fundação vem experimentando um grande crescimento urbano. Esse lugar que, originalmente era uma área de pastagens e fazendas, veio a se tornar um centro econômico e comercial na região.",
 	"Rapaz, um sujeito bem estranho passou dizendo que ia para uma  cidade aí, ele até disse o nome, mas não lembro bem, só lembro que ele disse  que a inspiração para o nome dessa cidade foi um pé de bacaba."
 

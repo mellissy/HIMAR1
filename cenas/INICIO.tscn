@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://6x0j61br3gfn"]
+
+[ext_resource type="Script" path="res://script/INICIO.gd" id="1_prupf"]
+[ext_resource type="Texture2D" uid="uid://bfrxsbahlixr1" path="res://tudo/imagens/outros/imagem inicial.jpeg" id="2_v0oyh"]
+
+[node name="INICIO" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_prupf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(175, 323.5)
+scale = Vector2(0.596667, 0.724781)
+texture = ExtResource("2_v0oyh")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

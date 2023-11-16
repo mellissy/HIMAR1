@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnqdmj4qyoj22"]
 
 [ext_resource type="Script" path="res://script/RANKING.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b27avxvd7okya" path="res://tudo/imagens/menu/menu_ranking.jpeg" id="2"]
-[ext_resource type="AudioStream" uid="uid://dumj5wfcfn6n0" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="3_p0iwm"]
-[ext_resource type="FontFile" uid="uid://bqgsgpspvosqo" path="res://tudo/fonts/BRITANIC.TTF" id="4_2ygfe"]
+[ext_resource type="Texture2D" uid="uid://cwc0xp63gvohb" path="res://tudo/imagens/menu/menu_ranking.jpeg" id="2"]
+[ext_resource type="AudioStream" uid="uid://djsw08q0rdvuo" path="res://tudo/sons/MusicaMenuPrincipal.mp3" id="3_p0iwm"]
+[ext_resource type="FontFile" uid="uid://chye5x60sbhrh" path="res://tudo/fonts/BRITANIC.TTF" id="4_2ygfe"]
 
 [node name="RANKING" type="Control"]
 layout_mode = 3
