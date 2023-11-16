@@ -1,9 +1,9 @@
 extends Control
 
 @onready var sem_dica =[ 
-"Oh meu querido, nao fiquei sabendo de nenhum suspeito", 
-"Desculpe-me, mas nao sei de ninguem suspeito pela região", 
-"Sinto muito, mas não passou suspeito por aqui.",
+"Oh meu querido, não fiquei sabendo de nenhum suspeito", 
+"Desculpe-me, mas não sei de ninguém suspeito pela região", 
+"Sinto muito, mas não passou nenhum suspeito por aqui.",
 "não vi nada de estranho por aqui.",
 "nenhuma pessoa suspeita passou por aqui", 
 "Sinto muito não poder lhe ajudar \n não avistei nada de estranho por aqui",
@@ -38,7 +38,7 @@ extends Control
 
 	],
 	"Pindaré": [
-	"Tinha uma pessoa bem estranha por aqui mesmo. Ele disse que iria para inauguração da primeira indústria da cidade. Aparentemente essa  indústria se chama Companhia Manufatureira e Agrícola. ",
+	"Tinha uma pessoa bem estranha por aqui mesmo. Ele disse que iria para o local onde estava a Companhia Manufatureira e Agrícola do Maranhão. Achei estranho, pois, essa fábrica fechou depois de mais de 50 anos de funcionamento",
 	"Uma pessoa suspeita    me falou que  depois da visita do presidente Afonso Pena no Estado, foi decidido  que iria ser colocado uma estação ferroviária em uma cidade da região dos cocais, ele disse que a estrada de ferro vai de São Luís até Cajazeira.",
 	"Eu ouvi uma pessoa muito suspeita dizendo para um senhor que estava indo para o leste do Estado, atrás de uma cidade da umbanda. "
 

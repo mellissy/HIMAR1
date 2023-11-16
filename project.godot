@@ -13,7 +13,8 @@ config_version=5
 config/name="HIMAR"
 run/main_scene="res://cenas/INICIO.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://HIMAR2-icon.ico"
+config/windows_native_icon="res://HIMAR2-icon.ico"
 
 [autoload]
 

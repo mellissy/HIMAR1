@@ -25,5 +25,6 @@ func _on_botao_1_pressed():
 
 
 func _on_video_stream_player_finished():
-	$Sprite2D.texture = load("res://tudo/imagens/outros/imagem_creditos.jpeg")
+	get_tree().change_scene_to_file("res://cenas/MENU.tscn"  )
+	#$Sprite2D.texture = load("res://tudo/imagens/outros/imagem_creditos.jpeg")
 	pass # Replace with function body.
