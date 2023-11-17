@@ -46,7 +46,7 @@ func _insertDB():
 		db.open_db()
 		db.query_with_bindings("select * from infojogador where nome = ?;", [name])
 		player = db.query_result
-	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0]["id"]])
+	db.query_with_bindings("update infojogador set status = '1' where id = ?;", [player[0].id])
 	#db.query_with_bindings("update infojogador set cenain = ?, cenaout = ?, score = ?, penas = ? where status = 1;", [player[0][Global.i][Global.i]["status"]])
 	
 	

@@ -11,3 +11,5 @@ res://cenas/RELIQUIAS.tscn
 res://cenas/video_da_reliquia_1.tscn
 res://cenas/INICIO.tscn
 res://cenas/recarregar_jogo.tscn
+res://script/NOVO_JOGO.gd
+res://script/RECARREGAR_JOGO.gd

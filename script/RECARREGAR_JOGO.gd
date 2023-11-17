@@ -62,11 +62,13 @@ var encontrar_jogador
 func _on_botao_2_pressed():
 	
 	encontrar_jogador = $TextEdit/OptionButton.text
+	if encontrar_jogador == "":
+		return
 	db.query_with_bindings("select * from infojogador where nome = ?;", [encontrar_jogador])
 	var jogador = db.query_result
-	db.query_with_bindings("select * from cidades where id = ?;", jogador[0].cenain)
+	db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenain])
 	var cenain = db.query_result
-	db.query_with_bindings("select * from cidades where id = ?;", jogador[0].cenaout)
+	db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenaout])
 	var cenaout = db.query_result
 	#Global.i = encontrar_jogador 
 	Global.nome = jogador[0].nome
@@ -74,10 +76,9 @@ func _on_botao_2_pressed():
 	Global.cidade = cenain[0].nome
 	Global.pena = jogador[0].penas
 	Global.outra_cidade = cenaout[0].nome
-	print("ok")
 	caminho_certo()
 	
-	print("ok")
+	db.query_with_bindings("""update infojogador set status = "1" where id = ?;""", [jogador[0].id])
 	
 	if Global.pena == -1:
 		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")

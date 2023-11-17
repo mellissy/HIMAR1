@@ -26,10 +26,12 @@ func _ready():
 	var ranking_pontos = " "
 	#var pontos
 	
-	var n =Global.vetorNomes.find("")
-	for i in range(0, n):
-		ranking_nome +=" \n" + Global.vetorNomes[i]
-		ranking_pontos +=" \n" + str(Global.vetorPontos[i])
+	var tamanho = 7
+	if len(players) < tamanho:
+		tamanho = len(players)
+	for i in range(tamanho):
+		ranking_nome +=" \n" + str(players[i].nome)
+		ranking_pontos +=" \n" + str(players[i].score)
 		
 		$nome.text = ranking_nome
 		$pontos.text = ranking_pontos
