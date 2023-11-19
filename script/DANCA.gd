@@ -1,11 +1,19 @@
 extends Control
 
+const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
+var db
+var db_name = "res://SQLite/database.db"
+
+
 # São Luís -> Imperatriz -> Grajaú -> Pindaré -> Codó -> 
 # -> Barreirinhas -> Alcântara -> Godofredo Viana -> Bacabal (Reliquia 1)
 # -> Pinheiro -> Timón ->São Jossé de Ribamar -> Luis Domingues
 # -> Paço do Lumiar -> Balsas -> Itapecuru -> Acailandia (Reliquia 2)
 
 func _ready():
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
 	if Global.som :
 		$AudioStreamPlayer2D.play(2)
 	if Global.som == false:
@@ -17,6 +25,8 @@ func _ready():
 	f_caminho()
 	if Global.cidade == "São José de Ribamar" and Global.outra_cidade == "Barra do Corda":
 		Global.pena = Global.pena + 6
+		db.query("""update infojogador set penas = "9" where status = '1';""")
+		db.close_db()
 		print("Jogo recarregado!")
 	if Global.pena<0:
 		get_tree().change_scene_to_file("res://cenas/game_over.tscn" )

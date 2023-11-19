@@ -1,13 +1,27 @@
 extends Control
 
+const sqlite = preload("res://addons/godot-sqlite/gdsqlite.gdextension")
+var db
+var db_name = "res://SQLite/database.db"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	db = SQLite.new()
+	db.path = db_name
+	db.open_db()
+	
 	Global.pontos = Global.pontos + 100
 	Global.SalvarDados()
 	if Global.cidade == "Alcântara" and Global.outra_cidade == "Barreirinhas":
 		Global.cont_reliquia = Global.cont_reliquia + 1
 		Global.pena = 9
+		db.query("""update infojogador set penas = "9" where status = '1';""")
+		#db.query_with_bindings("select * from infojogador where status = '1';",[])
+		#var player = db.query_result
+		#db.query_with_bindings("update infojogador set penas = ? where status = '1';", [player[0].penas+6])
+		db.close_db()
 		$VideoStreamPlayer.stream = preload( "res://tudo/imagens/reliquia/video_da_primeira_reliquia_com_letra.ogv")
 		$VideoStreamPlayer.play()
 	elif Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru" :
