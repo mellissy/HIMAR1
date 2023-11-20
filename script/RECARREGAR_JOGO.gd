@@ -35,8 +35,8 @@ func _ready():
 	for i in jogadores:
 		$TextEdit/OptionButton.add_item(i.nome)
 		
-	if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru":
-		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")
+	"""if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru":
+		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")"""
 	
 	pass # Replace with function body.
 	
@@ -62,27 +62,27 @@ var encontrar_jogador
 
 
 func _on_botao_2_pressed():
-	if Global.pena != -1:
-		encontrar_jogador = $TextEdit/OptionButton.text
-		if encontrar_jogador == "":
-			return
-		db.query_with_bindings("select * from infojogador where nome = ?;", [encontrar_jogador])
-		var jogador = db.query_result
-		db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenain])
-		var cenain = db.query_result
-		db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenaout])
-		var cenaout = db.query_result
-		#Global.i = encontrar_jogador 
-		Global.nome = jogador[0].nome
-		Global.pontos = jogador[0].score
-		Global.cidade = cenain[0].nome
-		Global.pena = jogador[0].penas
-		Global.outra_cidade = cenaout[0].nome
-		caminho_certo()
-		
-		db.query_with_bindings("""update infojogador set status = "1" where id = ?;""", [jogador[0].id])
+	#if Global.pena != -1:
+	encontrar_jogador = $TextEdit/OptionButton.text
+	if encontrar_jogador == "":
+		return
+	db.query_with_bindings("select * from infojogador where nome = ?;", [encontrar_jogador])
+	var jogador = db.query_result
+	db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenain])
+	var cenain = db.query_result
+	db.query_with_bindings("select * from cidades where id = ?;", [jogador[0].cenaout])
+	var cenaout = db.query_result
+	#Global.i = encontrar_jogador 
+	Global.nome = jogador[0].nome
+	Global.pontos = jogador[0].score
+	Global.cidade = cenain[0].nome
+	Global.pena = jogador[0].penas
+	Global.outra_cidade = cenaout[0].nome
+	caminho_certo()
 	
-	
+	db.query_with_bindings("""update infojogador set status = "1" where id = ?;""", [jogador[0].id])
+
+
 	
 	if Global.pena == -1:
 		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")
