@@ -38,6 +38,8 @@ func _ready():
 	"""if Global.cidade == "Açailândia" and Global.outra_cidade == "Itapecuru":
 		get_tree().change_scene_to_file( "res://cenas/video_da_reliquia_1.tscn")"""
 	
+	Global.cont_reliquia = 0
+	
 	pass # Replace with function body.
 	
 	

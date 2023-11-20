@@ -21,9 +21,10 @@ func _ready():
 		$Label.text = "PARABÉNS,\nVOCÊ ENCONTROU A PRIMEIRA RELÍQUIA!\n As suas energias foram recarregadas!"
 		Global.pena = 9
 		print("ok")
-		db.query_with_bindings("select * from infojogador where status = '1';",[])
-		var player = db.query_result
-		db.query_with_bindings("update infojogador set penas = ? where status = '1';", [player[0].penas+6])
+		#db.query_with_bindings("select * from infojogador where status = '1';",[])
+		#var player = db.query_result
+		#db.query_with_bindings("update infojogador set penas = ? where status = '1';", [player[0].penas+6])
+		db.query("""update infojogador set penas = "9" where status = '1';""")
 		db.close_db()
 		$botao1/Label.text =" CONTINUAR"
 		$Sprite2D.texture = load("res://tudo/imagens/reliquia/reliquia_1.jpeg" )

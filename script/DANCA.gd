@@ -24,7 +24,7 @@ func _ready():
 	Global.pena = Global.pena-1
 	f_caminho()
 	if Global.cidade == "São José de Ribamar" and Global.outra_cidade == "Barra do Corda":
-		Global.pena = Global.pena + 6
+		Global.pena = 9
 		db.query("""update infojogador set penas = "9" where status = '1';""")
 		db.close_db()
 		print("Jogo recarregado!")

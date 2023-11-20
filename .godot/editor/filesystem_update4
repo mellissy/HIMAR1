@@ -1,5 +1,6 @@
 res://cenas/NOVO_JOGO.tscn
-res://script/RECARREGAR_JOGO.gd
+res://script/DANCA.gd
+res://script/RELIQUIAS.gd
 res://cenas/COMECAR.tscn
 res://cenas/MENU.tscn
 res://cenas/CAZUMBAR.tscn
@@ -12,4 +13,6 @@ res://cenas/RELIQUIAS.tscn
 res://cenas/video_da_reliquia_1.tscn
 res://cenas/INICIO.tscn
 res://cenas/recarregar_jogo.tscn
-res://script/RELIQUIAS.gd
+res://script/GLOBAL.gd
+res://script/RECARREGAR_JOGO.gd
+res://script/COMECAR.gd
