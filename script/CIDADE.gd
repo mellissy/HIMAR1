@@ -29,7 +29,7 @@ var db_name = "res://SQLite/database.db"
 	"Barra do Corda": ["res://tudo/imagens/mapa/cenario_novo/Barra_do_corda.jpg" ],#f
 	"Bacabal": [ "res://tudo/imagens/mapa/cenario_novo/bacabal.jpg" ],#f
 	"Paço do Lumiar": ["res://tudo/imagens/mapa/cenario_novo/Paco_do_Lumiar.jpg" ], #f
-	"Timon": [ "res://tudo/imagens/mapa/cenario_novo/Timon.jpg"],#f
+	"Timon": [ "res://tudo/imagens/mapa/cenario_novo/17.timon_ok.jpg"  ],#f
 	"Balsas": [ "res://tudo/imagens/mapa/cenario_novo/balsas.jpg"],
 	"Pinheiro": ["res://tudo/imagens/mapa/cenario_novo/pinheiro.jpg" ],#f
 	"São José de Ribamar": [ "res://tudo/imagens/mapa/cenario_novo/Sao_Jose_do_ribamar.jpg"],#f
@@ -73,7 +73,7 @@ var db_name = "res://SQLite/database.db"
 	"Barra do Corda": [Vector2(100,252),Vector2(166,306),Vector2(223,335)  ],
 	"Bacabal": [Vector2(90,300),Vector2(123,233),Vector2(245,225)  ],
 	"Paço do Lumiar": [Vector2(23,250),Vector2(98,259),Vector2(216,287)  ],
-	"Timon":[Vector2(87,246),Vector2(164,298),Vector2(222,338)  ],
+	"Timon":[Vector2(157,240),Vector2(237,366),Vector2(90,378)  ],
 	"Balsas":[Vector2(185,260),Vector2(120,315),Vector2(48,463)  ],
 	"Pinheiro":[Vector2(228,265),Vector2(157,312),Vector2(32,390)  ],
 	"São José de Ribamar": [Vector2(285,265),Vector2(82,330),Vector2(100,455)  ],
@@ -102,7 +102,7 @@ var db_name = "res://SQLite/database.db"
 	"Barra do Corda":[ Vector2(150,80),Vector2(247,30),Vector2(230,50) ],
 	"Bacabal": [ Vector2(343,70),Vector2(350,70),Vector2(163,105) ],
 	"Paço do Lumiar": [ Vector2(127,152),Vector2(313,77),Vector2(297,62) ],
-	"Timon": [ Vector2(184,85),Vector2(235,33),Vector2(180,45) ],
+	"Timon": [ Vector2(383,111),Vector2(167,122),Vector2(357,35) ],
 	"Balsas": [Vector2(373,90),Vector2(130,85),Vector2(337,55)  ],
 	"Pinheiro": [Vector2(330,58),Vector2(190,64),Vector2(260,40)  ],
 	"São José de Ribamar": [ Vector2(182,65),Vector2(307,38),Vector2(303,40) ],
@@ -130,7 +130,7 @@ var db_name = "res://SQLite/database.db"
 	"Barra do Corda":  [Vector2(142,266)],
 	"Bacabal":  [Vector2(184,315)],
 	"Paço do Lumiar":  [Vector2(183,277)],
-	"Timon":  [Vector2(138,264)],
+	"Timon":  [Vector2(166,408)],
 	"Balsas": [Vector2(234,378)],
 	"Pinheiro": [Vector2(115,328)],
 	"São José de Ribamar":  [Vector2(217,285)],

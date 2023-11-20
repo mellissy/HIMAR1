@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://blby0eur42wkj"]
 
-[ext_resource type="Texture2D" uid="uid://baghmmnmwa1qq" path="res://tudo/imagens/mapa/cenario_novo/itapecuru.jpg" id="2_0cmwt"]
+[ext_resource type="Texture2D" uid="uid://c683wyobn1lyt" path="res://tudo/imagens/mapa/cenario_novo/17.timon_ok.jpg" id="2_c4pmq"]
 [ext_resource type="Texture2D" uid="uid://bp8ma4dqka1s1" path="res://tudo/Botoes/botao.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://cw4bqmy8mkmgt" path="res://tudo/Botoes/botaoAoClicar.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dyac54buuv0pk" path="res://tudo/Botoes/BotaoClique.png" id="5"]
@@ -21,7 +21,7 @@ script = ExtResource("6")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(223, 53)
 scale = Vector2(0.5, 0.52)
-texture = ExtResource("2_0cmwt")
+texture = ExtResource("2_c4pmq")
 offset = Vector2(-88.4916, 521.521)
 
 [node name="botao1" type="TextureButton" parent="."]
@@ -82,27 +82,27 @@ clip_text = true
 
 [node name="dica1" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 169.0
-offset_top = 273.0
-offset_right = 499.0
-offset_bottom = 320.0
+offset_left = 157.0
+offset_top = 240.0
+offset_right = 540.0
+offset_bottom = 351.0
 scale = Vector2(0.3, 1)
 ignore_texture_size = true
 
 [node name="dica2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 238.0
-offset_top = 359.0
-offset_right = 418.0
-offset_bottom = 444.0
+offset_left = 237.0
+offset_top = 366.0
+offset_right = 404.0
+offset_bottom = 488.0
 scale = Vector2(0.3, 1)
 
 [node name="dica3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 399.0
-offset_right = 364.0
-offset_bottom = 448.0
+offset_left = 89.0
+offset_top = 378.0
+offset_right = 446.0
+offset_bottom = 413.0
 scale = Vector2(0.3, 1)
 
 [node name="penas" type="Sprite2D" parent="."]
@@ -115,10 +115,10 @@ stream = ExtResource("9_3ix77")
 
 [node name="luminaria" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 395.0
-offset_right = 867.0
-offset_bottom = 2315.0
+offset_left = 166.0
+offset_top = 408.0
+offset_right = 841.0
+offset_bottom = 2328.0
 scale = Vector2(0.04, 0.04)
 texture_normal = ExtResource("10_3qotv")
 ignore_texture_size = true

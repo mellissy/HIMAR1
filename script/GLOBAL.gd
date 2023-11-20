@@ -1,6 +1,6 @@
 extends Node
 
-var cidade = "São Luís"
+var cidade = "Timon"
 var outra_cidade = "São Luís"
 var pena = 5
 var botao = 0
